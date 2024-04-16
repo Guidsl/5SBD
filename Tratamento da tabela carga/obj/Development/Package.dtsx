@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{D999BFC6-DFC9-490D-818E-62D516681413}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{2159E132-F1AC-405A-B4CB-7B23092A4DFC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -51,7 +51,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="codigoProduto"
-              DTS:DTSID="{6F6F3217-06AD-4666-8345-92D566D8E9FA}"
+              DTS:DTSID="{40D19CBE-9B53-4BFC-9B40-108C56CAC462}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="dataPedido"
-              DTS:DTSID="{E7DAB0B2-E2F2-41E6-B8CF-3811CD525518}"
+              DTS:DTSID="{2AA83CE8-3642-46BD-827F-71FBABFCE868}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -68,8 +68,8 @@
               DTS:MaximumWidth="6"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="sou"
-              DTS:DTSID="{6B36284F-1FE8-4C75-8483-56CB0C32DDF1}"
+              DTS:ObjectName="origem_pedido"
+              DTS:DTSID="{0FA2676E-0ED0-4B0E-B162-FE232094D240}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,8 +77,8 @@
               DTS:MaximumWidth="50"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="upc"
-              DTS:DTSID="{66E2C812-A6CF-4A52-A059-868A713F32B4}"
+              DTS:ObjectName="cod_pedido"
+              DTS:DTSID="{FC3274C6-C3ED-4D19-90D8-B7968EAE2010}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,7 +87,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nomeProduto"
-              DTS:DTSID="{64F1DF37-E8AD-4187-A595-882E51E0CEC0}"
+              DTS:DTSID="{67B85F88-5519-49CD-8E7E-A9A4D7DCD4A7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -95,7 +95,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="qtd"
-              DTS:DTSID="{3D0B23F4-450A-4BC8-8621-7104153D3F6C}"
+              DTS:DTSID="{A806864D-DACE-4E96-BAA6-B59D983D93CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +103,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="valor"
-              DTS:DTSID="{0F9C3EEE-CA83-49EE-906C-C9B1A5D69635}"
+              DTS:DTSID="{6678CB2D-1FCA-4CF5-AC9B-FEE869ADAE1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="frete"
-              DTS:DTSID="{944D3A9F-2D0A-42C8-97E6-2BE9138ED570}"
+              DTS:DTSID="{913AC9E5-8B99-4674-9477-646B01CEC46A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="email"
-              DTS:DTSID="{CF168E52-7A90-436E-9A18-6B007DC818F7}"
+              DTS:DTSID="{A39B8867-95F3-4C8B-884C-72A3E49FBDFA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="nomeComprador"
-              DTS:DTSID="{AD95B783-ABAE-473A-85CA-A0D23566A881}"
+              DTS:DTSID="{F57CC0B2-7C65-4B2D-A09B-805F531D24FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="endereco"
-              DTS:DTSID="{61C5059D-51B7-4859-9D85-80CDE7DE9C5E}"
+              DTS:DTSID="{19F42FF4-9969-4C17-A38D-204CCE37A35A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cep"
-              DTS:DTSID="{F07F321A-A003-4AD4-9281-842E56A4CA48}"
+              DTS:DTSID="{B17BC93F-EE0D-4E04-A031-084D460F7921}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="uf"
-              DTS:DTSID="{A0A9750A-B10B-49A5-91E3-FB80E78F7AF4}"
+              DTS:DTSID="{170FEDAE-9124-4651-8C75-C9F797CAC4EE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="pais"
-              DTS:DTSID="{BF4D3A7E-4CCB-479B-A05B-30F56B922D75}"
+              DTS:DTSID="{EEAFEDEF-1BEE-45CA-846D-C257A66D6B1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="imposto"
-              DTS:DTSID="{04BAB04F-2693-46CA-A163-1046B2F46DA7}"
+              DTS:DTSID="{45E0B25E-1E49-4D32-9B57-BA6571B33E9C}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -355,6 +355,20 @@
                       cachedName="imposto"
                       externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[imposto]"
                       lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[imposto]" />
+                    <inputColumn
+                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[origem_pedido]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="origem_pedido"
+                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[origem_pedido]"
+                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]" />
+                    <inputColumn
+                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[cod_pedido]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cod_pedido"
+                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[cod_pedido]"
+                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -517,48 +531,6 @@
                       length="50"
                       lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[dataPedido]"
                       name="dataPedido"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sou]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sou]"
-                      length="6"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sou]"
-                      name="sou"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
-                      length="50"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
-                      name="upc"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -798,6 +770,48 @@
                           name="UseBinaryFormat">false</property>
                       </properties>
                     </outputColumn>
+                    <outputColumn
+                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[origem_pedido]"
+                      length="6"
+                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]"
+                      name="origem_pedido"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_pedido]"
+                      length="50"
+                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]"
+                      name="cod_pedido"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -811,16 +825,6 @@
                       dataType="wstr"
                       length="50"
                       name="dataPedido" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sou]"
-                      dataType="wstr"
-                      length="6"
-                      name="sou" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
-                      dataType="wstr"
-                      length="50"
-                      name="upc" />
                     <externalMetadataColumn
                       refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeProduto]"
                       dataType="wstr"
@@ -872,6 +876,16 @@
                       refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[imposto]"
                       dataType="r4"
                       name="imposto" />
+                    <externalMetadataColumn
+                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[origem_pedido]"
+                      dataType="wstr"
+                      length="6"
+                      name="origem_pedido" />
+                    <externalMetadataColumn
+                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_pedido]"
+                      dataType="wstr"
+                      length="50"
+                      name="cod_pedido" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -945,7 +959,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Cliente (nome, email)&#xA;SELECT&#xA;    TC.nomeComprador,&#xA;    TC.email&#xA;FROM&#xA;    Carga TC&#xA;LEFT JOIN&#xA;    Cliente TCL ON TC.email = TCL.email&#xA;WHERE&#xA;    TCL.email IS NULL;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Cliente (nome, email)&#xA;SELECT DISTINCT&#xA;    &#x9;nomeComprador,&#xA;&#x9;TC.email&#xA;FROM&#xA;    Carga TC&#xA;LEFT JOIN&#xA;    Cliente TCL ON TC.email = TCL.email&#xA;WHERE&#xA;    TCL.email IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -962,24 +976,24 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO PedidoProduto (id_Pedido, id_Produto,cod_Pedido)&#xA;SELECT &#xA;&#x9;  TP.id_Pedido,&#xA;&#x9;  TP.codigo_Produto,&#xA;&#x9;  TPR.idProduto&#xA;FROM &#xA;&#x9;Pedido TP&#xA;JOIN Produto TPR ON TP.codigo_Produto=TPR.codigo&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO PedidoProduto(id_Pedido, id_Produto, quantidade)&#xA;SELECT &#xA;&#x9;TP.id_Pedido,&#xA;&#x9;TPR.idProduto,&#xA;&#x9;TC.qtd&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN Pedido TP ON TP.cod_Pedido=TC.cod_pedido&#xA;INNER JOIN Produto TPR ON TPR.nome = TC.nomeProduto;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Registrar Pedido"
+      DTS:refId="Package\Registrar Pedidos"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
       DTS:DTSID="{6009515C-5553-42DF-96A1-4E71959CCC64}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Registrar Pedido"
+      DTS:ObjectName="Registrar Pedidos"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Pedido(&#xA;&#x9;&#x9;&#x9;&#x9;   id_Cliente, &#xA;&#x9;&#x9;&#x9;&#x9;   codigo_Produto, &#xA;&#x9;&#x9;&#x9;&#x9;   cod_Pedido, &#xA;&#x9;&#x9;&#x9;&#x9;   origem_Pedido, &#xA;&#x9;&#x9;&#x9;&#x9;   nome_Produto, &#xA;&#x9;&#x9;&#x9;&#x9;   quantidade, &#xA;&#x9;&#x9;&#x9;&#x9;   valor, &#xA;&#x9;&#x9;&#x9;&#x9;   frete, &#xA;&#x9;&#x9;&#x9;&#x9;   imposto, &#xA;&#x9;&#x9;&#x9;&#x9;   endereco, &#xA;&#x9;&#x9;&#x9;&#x9;   cep, &#xA;&#x9;&#x9;&#x9;&#x9;   uf, &#xA;&#x9;&#x9;&#x9;&#x9;   pais, &#xA;&#x9;&#x9;&#x9;&#x9;   data_Pedido)&#xA;&#xA;SELECT &#xA;&#x9;TCL.id_Cliente,&#xA;&#x9;codigoProduto,&#xA;&#x9;cod_pedido,&#xA;&#x9;origem_pedido,&#xA;&#x9;nomeProduto,&#xA;&#x9;qtd,&#xA;&#x9;valor,&#xA;&#x9;frete,&#xA;&#x9;imposto,&#xA;&#x9;endereco,&#xA;&#x9;cep,&#xA;&#x9;uf,&#xA;&#x9;pais,&#xA;&#x9;dataPedido&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN DB_Vendas.dbo.Cliente TCL ON TCL.email=TC.email&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Pedido(&#xA;&#x9;&#x9;&#x9;&#x9;   id_Cliente, &#xA;&#x9;&#x9;&#x9;&#x9;   cod_Pedido, &#xA;&#x9;&#x9;&#x9;&#x9;   origem_Pedido,&#xA;&#x9;&#x9;&#x9;&#x9;   endereco, &#xA;&#x9;&#x9;&#x9;&#x9;   cep, &#xA;&#x9;&#x9;&#x9;&#x9;   uf, &#xA;&#x9;&#x9;&#x9;&#x9;   pais, &#xA;&#x9;&#x9;&#x9;&#x9;   data_Pedido)&#xA;&#xA;SELECT DISTINCT&#xA;&#x9;TCL.id_Cliente,&#xA;&#x9;cod_pedido,&#xA;&#x9;origem_pedido,&#xA;&#x9;endereco,&#xA;&#x9;cep,&#xA;&#x9;uf,&#xA;&#x9;pais,&#xA;&#x9;dataPedido&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN Cliente TCL ON TCL.email=TC.email&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -996,7 +1010,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Produto (nome, codigo,preco)&#xA;SELECT DISTINCT &#xA;&#x9;TC.nomeProduto,&#xA;&#x9;TC.codigoProduto,&#xA;&#x9;TC.valor&#xA;FROM Carga TC&#xA;LEFT JOIN&#xA;&#x9;Produto TP ON TC.codigoProduto = TP.codigo&#xA;WHERE&#xA;&#x9;TP.codigo IS NULL;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Produto (nome, codigo)&#xA;SELECT DISTINCT &#xA;&#x9;TC.nomeProduto,&#xA;&#x9;TC.codigoProduto&#xA;FROM Carga TC&#xA;LEFT JOIN&#xA;&#x9;Produto TP ON TC.codigoProduto = TP.codigo&#xA;WHERE&#xA;&#x9;TP.codigo IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1020,7 +1034,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
       DTS:CreationName=""
-      DTS:DTSID="{FBA2FF02-63D9-442B-A511-2A4AE8624907}"
+      DTS:DTSID="{E4D8F3FD-358C-4BB3-A207-F4549F22FFC7}"
       DTS:From="Package\Registrar Clientes"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 2"
@@ -1032,12 +1046,12 @@
       DTS:From="Package\Registrar Produtos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 3"
-      DTS:To="Package\Registrar Pedido" />
+      DTS:To="Package\Registrar Pedidos" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 4]"
       DTS:CreationName=""
       DTS:DTSID="{41E3E342-0B27-487F-AF94-FD202391BD82}"
-      DTS:From="Package\Registrar Pedido"
+      DTS:From="Package\Registrar Pedidos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 4"
       DTS:To="Package\Registrar Itens dos Pedidos" />
@@ -1067,9 +1081,17 @@
           Id="Package\Registrar Clientes"
           TopLeft="102,169" />
         <NodeLayout
+          Size="214,42"
+          Id="Package\Registrar Itens dos Pedidos"
+          TopLeft="73,385" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Registrar Pedidos"
+          TopLeft="97,311" />
+        <NodeLayout
           Size="171,42"
           Id="Package\Registrar Produtos"
-          TopLeft="99.9999999999999,235.923076923077" />
+          TopLeft="95.9999999999999,243.923076923077" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="180.448717948718,77.1025641025641">
@@ -1115,34 +1137,8 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="185.25,211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.923076923077"
-              Start="0,0"
-              End="0,17.423076923077">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.423076923077" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Registrar Pedido"
-          TopLeft="106,303" />
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="186,277.923076923077">
+          TopLeft="180.75,285.923076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1162,24 +1158,42 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Registrar Itens dos Pedidos"
-          TopLeft="73,371" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 4]"
-          TopLeft="183.25,345">
+          TopLeft="180,353">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26"
+              EndConnector="0,32"
               Start="0,0"
-              End="0,18.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 2]"
+          TopLeft="183.25,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.923076923077"
+              Start="0,0"
+              End="0,25.423076923077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.423076923077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1195,7 +1209,7 @@
     design-time-name="Package\Importar para Carga">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="213,42"
           Id="Package\Importar para Carga\Origem de Arquivo Simples"
@@ -1223,9 +1237,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
