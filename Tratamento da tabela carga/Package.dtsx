@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="117"
-  DTS:VersionGUID="{53879864-3139-44FE-BEBA-F8D028111361}">
+  DTS:VersionBuild="146"
+  DTS:VersionGUID="{F3AB5CF5-EAF1-4657-A024-B316079BE3EF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD9Z7tkACAbJM9Il9CZB9oRYcJAnkqnSDacj5YVfgnHqgAAAAAOgAAAAAIAACAAAADLMyBRLKDopPSmjrKNmGjMaqKMUsVBYRuhr3JBySXesSAAAAA6z7uFOVh6pMP+b8VrdJP9TPAxEXOvNUDiK3z37Uoor0AAAADjn5kLYWzK1ITb8RpVn3NYKH93fBQsbNyZo5Lshfm4GDnTY5U9sjfC9PE80h4D1pzV157AykfqeMl3ilAguFIL</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACVKApYc/TYRtDjia/3Yx12iE3GtnqG7MBRVrnUYBtriQAAAAAOgAAAAAIAACAAAADW0ezDF33tByAkJV1XfSbbg3FzJu/GJeQFxxFnmazXbyAAAAAVKxWz1EVLGl7fHj0lFnWGaIeKhvLYmEAkvlAP6HuCsEAAAAAOeIQBq5SEK2Jjr65qOQFloWWjZiIBv9PWwhRnwPHfg4/H2RGtyWMhV0SKNsMsu7gGjD8TUV3F0kjVd/JZEmFq</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -261,850 +261,115 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Importar para Carga"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Tarefa Fluxo de Dados"
-      DTS:Disabled="True"
-      DTS:DTSID="{E2C7B3DD-4A23-44DA-86C7-861A3EDA03C6}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Importar para Carga"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Importar para Carga\Carregar Tabela"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
-              description="Destino OLE DB"
-              name="Carregar Tabela"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowset">[dbo].[Carga]</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica a variável que contém o nome do objeto de banco de dados usado para abrir um conjunto de linhas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="O comando SQL a ser executado."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica a página de código de coluna a ser usada quando não há informações de página de código disponíveis a partir da fonte de dados."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forca o uso do valor da propriedade DefaultCodePage durante a descrição dos dados de caractere."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica o modo usado para acessar o banco de dados."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica se os valores fornecidos para colunas de identidade serão copiados no destino. Se false, os valores para colunas de identidade serão gerados automaticamente no destino. Aplicável apenas se o carregamento rápido estiver ativado."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica se as colunas que contêm null terão null inserido no destino. Se false, as colunas que contêm null terão seus valores padrão inseridos no destino. Aplicável apenas se o carregamento rápido estiver ativado."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica as opções a serem usadas com o carregamento rápido. Aplicável apenas se o carregamento rápido estiver ativado."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica quando confirmações são emitidas durante a inserção de dados. Um valor de 0 especifica que uma confirmação será emitida ao final da inserção de dados. Aplicável somente se o carregamento rápido estiver ativado."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Importar para Carga\Carregar Tabela.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-A2POI3V\MSSQLSERVER03.DB_Vendas]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-A2POI3V\MSSQLSERVER03.DB_Vendas]"
-                  description="A conexão de tempo de execução OLE DB usada para acessar o banco de dados."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB]"
-                  errorOrTruncationOperation="Inserir"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de Destino OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[codigoProduto]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="codigoProduto"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[codigoProduto]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[codigoProduto]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[dataPedido]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="dataPedido"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[dataPedido]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[dataPedido]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[nomeProduto]"
-                      cachedDataType="wstr"
-                      cachedLength="9"
-                      cachedName="nomeProduto"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[nomeProduto]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeProduto]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[qtd]"
-                      cachedDataType="i1"
-                      cachedName="qtd"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[qtd]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[qtd]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[valor]"
-                      cachedDataType="r4"
-                      cachedName="valor"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[valor]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[valor]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[frete]"
-                      cachedDataType="r4"
-                      cachedName="frete"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[frete]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[frete]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[email]"
-                      cachedDataType="wstr"
-                      cachedLength="21"
-                      cachedName="email"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[email]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[nomeComprador]"
-                      cachedDataType="wstr"
-                      cachedLength="17"
-                      cachedName="nomeComprador"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[nomeComprador]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[endereco]"
-                      cachedDataType="wstr"
-                      cachedLength="25"
-                      cachedName="endereco"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[endereco]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[cep]"
-                      cachedDataType="wstr"
-                      cachedLength="9"
-                      cachedName="cep"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[cep]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cep]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[uf]"
-                      cachedDataType="wstr"
-                      cachedLength="2"
-                      cachedName="uf"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[uf]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[uf]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[pais]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="pais"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[pais]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[pais]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[imposto]"
-                      cachedDataType="r4"
-                      cachedName="imposto"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[imposto]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[imposto]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[origem_pedido]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="origem_pedido"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[origem_pedido]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]" />
-                    <inputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].Columns[cod_pedido]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="cod_pedido"
-                      externalMetadataColumnId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[cod_pedido]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[codigoProduto]"
-                      dataType="i4"
-                      name="codigoProduto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[dataPedido]"
-                      dataType="wstr"
-                      length="50"
-                      name="dataPedido" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[nomeProduto]"
-                      dataType="wstr"
-                      length="100"
-                      name="nomeProduto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[qtd]"
-                      dataType="i4"
-                      name="qtd" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[valor]"
-                      dataType="cy"
-                      name="valor" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[frete]"
-                      dataType="cy"
-                      name="frete" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[email]"
-                      dataType="wstr"
-                      length="100"
-                      name="email" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[nomeComprador]"
-                      dataType="wstr"
-                      length="100"
-                      name="nomeComprador" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[endereco]"
-                      dataType="wstr"
-                      length="255"
-                      name="endereco" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[cep]"
-                      dataType="wstr"
-                      length="9"
-                      name="cep" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[uf]"
-                      dataType="wstr"
-                      length="2"
-                      name="uf" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[pais]"
-                      dataType="wstr"
-                      length="100"
-                      name="pais" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[imposto]"
-                      dataType="cy"
-                      name="imposto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[origem_pedido]"
-                      dataType="wstr"
-                      length="100"
-                      name="origem_pedido" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB].ExternalColumns[cod_pedido]"
-                      dataType="wstr"
-                      length="50"
-                      name="cod_pedido" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Importar para Carga\Carregar Tabela.Outputs[Saída de Erro de Destino OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Saída de Erro de Destino OLE DB"
-                  synchronousInputId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Importar para Carga\Carregar Tabela.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Importar para Carga\Carregar Tabela.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Importar para Carga\Carregar Tabela.Outputs[Saída de Erro de Destino OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Importar para Carga\Origem de Arquivo Simples"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
-              description="Origem de Arquivo Simples"
-              localeId="1046"
-              name="Origem de Arquivo Simples"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Importar para Carga\Origem de Arquivo Simples.Connections[FlatFileConnection]"
-                  connectionManagerID="{F0573D21-F9F5-45A1-938A-02FF5B4FF183}:invalid"
-                  connectionManagerRefId="{F0573D21-F9F5-45A1-938A-02FF5B4FF183}:invalid"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
-                  name="Saída de Origem de Arquivo Simples">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[codigoProduto]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[codigoProduto]"
-                      length="50"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[codigoProduto]"
-                      name="codigoProduto"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[dataPedido]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[dataPedido]"
-                      length="50"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[dataPedido]"
-                      name="dataPedido"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeProduto]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeProduto]"
-                      length="9"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeProduto]"
-                      name="nomeProduto"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[qtd]"
-                      dataType="i1"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[qtd]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[qtd]"
-                      name="qtd"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[valor]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[valor]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[valor]"
-                      name="valor"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[frete]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[frete]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[frete]"
-                      name="frete"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[email]"
-                      length="21"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]"
-                      name="email"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeComprador]"
-                      length="17"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[nomeComprador]"
-                      name="nomeComprador"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[endereco]"
-                      length="25"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[endereco]"
-                      name="endereco"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cep]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cep]"
-                      length="9"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cep]"
-                      name="cep"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[uf]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[uf]"
-                      length="2"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[uf]"
-                      name="uf"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[pais]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[pais]"
-                      length="6"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[pais]"
-                      name="pais"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[imposto]"
-                      dataType="r4"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[imposto]"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[imposto]"
-                      name="imposto"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[origem_pedido]"
-                      length="6"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[origem_pedido]"
-                      name="origem_pedido"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversão"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_pedido]"
-                      length="50"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cod_pedido]"
-                      name="cod_pedido"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica se os dados estão em formato binário."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[codigoProduto]"
-                      dataType="wstr"
-                      length="50"
-                      name="codigoProduto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[dataPedido]"
-                      dataType="wstr"
-                      length="50"
-                      name="dataPedido" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeProduto]"
-                      dataType="wstr"
-                      length="9"
-                      name="nomeProduto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[qtd]"
-                      dataType="i1"
-                      name="qtd" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[valor]"
-                      dataType="r4"
-                      name="valor" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[frete]"
-                      dataType="r4"
-                      name="frete" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[email]"
-                      dataType="wstr"
-                      length="21"
-                      name="email" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[nomeComprador]"
-                      dataType="wstr"
-                      length="17"
-                      name="nomeComprador" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[endereco]"
-                      dataType="wstr"
-                      length="25"
-                      name="endereco" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cep]"
-                      dataType="wstr"
-                      length="9"
-                      name="cep" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[uf]"
-                      dataType="wstr"
-                      length="2"
-                      name="uf" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[pais]"
-                      dataType="wstr"
-                      length="6"
-                      name="pais" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[imposto]"
-                      dataType="r4"
-                      name="imposto" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[origem_pedido]"
-                      dataType="wstr"
-                      length="6"
-                      name="origem_pedido" />
-                    <externalMetadataColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cod_pedido]"
-                      dataType="wstr"
-                      length="50"
-                      name="cod_pedido" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
-                  isErrorOut="true"
-                  name="Saída de Erro de Origem de Arquivo Simples">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
-                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Importar para Carga.Paths[Saída de Origem de Arquivo Simples]"
-              endId="Package\Importar para Carga\Carregar Tabela.Inputs[Entrada de Destino OLE DB]"
-              name="Saída de Origem de Arquivo Simples"
-              startId="Package\Importar para Carga\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Limpar Carga"
+      DTS:refId="Package\Atualizar Valor Total em Pedidos"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{558E5962-6239-4DDF-8889-BB0B3215E35C}"
+      DTS:DTSID="{3AE2250C-20A1-4594-A749-A0E66802C685}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Limpar Carga"
+      DTS:ObjectName="Atualizar Valor Total em Pedidos"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="UPDATE Pedido&#xA;SET total =(&#xA;&#x9;&#x9;&#x9;SELECT SUM(TIP.quantity * TPR.&quot;item-price&quot;)&#xA;&#x9;&#x9;&#x9;FROM ItemPedido TIP&#xA;&#x9;&#x9;&#x9;INNER JOIN Produto TPR ON TIP.&quot;id-product&quot; = TPR.&quot;id-product&quot;&#xA;&#x9;&#x9;&#x9;WHERE TIP.&quot;id-order&quot; = Pedido.&quot;id-order&quot;&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inserir Clientes"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{7BBEA4EE-76BF-44B8-8EC5-598C1B6794D8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inserir Clientes"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="INSERT INTO Cliente (&#xA;    &quot;buyer-email&quot;,&#xA;    &quot;buyer-name&quot;,&#xA;    cpf,&#xA;    &quot;buyer-phone-number&quot;&#xA;)&#xA;SELECT DISTINCT&#xA;    TC.&quot;buyer-email&quot;,&#xA;    TC.&quot;buyer-name&quot;,&#xA;    TC.cpf,&#xA;    TC.&quot;buyer-phone-number&quot; &#xA;FROM Carga TC &#xA;LEFT JOIN Cliente TCL ON TC.&quot;buyer-email&quot; = TCL.&quot;buyer-email&quot;&#xA;WHERE TCL.&quot;buyer-email&quot; IS NULL;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inserir Item Pedido"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{CCC81A28-DAFF-4503-9058-000C8326E9F5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inserir Item Pedido"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="INSERT INTO ItemPedido (&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;id-order&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;id-product&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;quantity,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;order-item-id&quot;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;)&#xA;SELECT &#xA;&#x9;&#x9;TPE.&quot;id-order&quot;,&#xA;&#x9;&#x9;TPR.&quot;id-product&quot;,&#xA;&#x9;&#x9;TC.&quot;quantity-purchased&quot;,&#xA;&#x9;&#x9;TC.&quot;order-item-id&quot;&#xA;FROM Carga TC&#xA;INNER JOIN Pedido TPE ON TPE.&quot;order-id-marketplace&quot;= TC.&quot;order-id&quot;&#xA;INNER JOIN Produto TPR ON TPR.upc = TC.upc;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inserir Pedidos"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{B7F1464B-5FBF-4A2C-B88F-B5F58C7A23FB}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inserir Pedidos"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="INSERT INTO Pedido(&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;order-id-marketplace&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;id-client&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;purchase-date&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;payments-date&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;currency&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-service-level&quot; ,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-address-1&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-address-2&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-address-3&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-city&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-state&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-postal-code&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;   &quot;ship-country&quot;&#xA;&#x9;&#x9;&#x9;&#x9;   )&#xA;&#xA;SELECT DISTINCT&#xA;&#x9;&#x9;&#x9;&#x9;&quot;order-id&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;TCL.&quot;id-client&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;purchase-date&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;payments-date&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;currency&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-service-level&quot; ,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-address-1&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-address-2&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-address-3&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-city&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-state&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-postal-code&quot;,&#xA;&#x9;&#x9;&#x9;&#x9;&quot;ship-country&quot;&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN Cliente TCL ON TCL.cpf=TC.cpf;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inserir Produtos"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{0531F08A-60A7-4384-85E8-95A8C1EAA702}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inserir Produtos"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="INSERT INTO Produto (&#xA;    sku,&#xA;    upc,&#xA;    &quot;product-name&quot;,&#xA;    &quot;item-price&quot;&#xA;)&#xA;SELECT&#xA;    TC.sku,&#xA;    TC.upc,&#xA;    TC.&quot;product-name&quot;,&#xA;    TC.&quot;item-price&quot;&#xA;FROM Carga TC&#xA;LEFT JOIN Produto TP ON TC.upc = TP.upc&#xA;WHERE TP.upc IS NULL&#xA;GROUP BY TC.sku, TC.upc, TC.&quot;product-name&quot;, TC.&quot;item-price&quot;;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpar Tabela Caraga"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{24DDD2BE-94F7-4C9A-A1A9-9412D61C60F8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpar Tabela Caraga"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Carga;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Registrar Clientes"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{D30A25CB-EB78-4D6A-8BF1-F50D33CF4E41}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Registrar Clientes"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Cliente (nome, email)&#xA;SELECT DISTINCT&#xA;    &#x9;nomeComprador,&#xA;&#x9;TC.email&#xA;FROM&#xA;    Carga TC&#xA;LEFT JOIN&#xA;    Cliente TCL ON TC.email = TCL.email&#xA;WHERE&#xA;    TCL.email IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Registrar Itens dos Pedidos"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{FA0B12D9-A0F4-49C4-95D3-0000400E7ED1}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Registrar Itens dos Pedidos"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO PedidoProduto(id_Pedido, id_Produto, quantidade)&#xA;SELECT &#xA;&#x9;TP.id_Pedido,&#xA;&#x9;TPR.idProduto,&#xA;&#x9;TC.qtd&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN Pedido TP ON TP.cod_Pedido=TC.cod_pedido&#xA;INNER JOIN Produto TPR ON TPR.nome = TC.nomeProduto;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Registrar Pedidos"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{6009515C-5553-42DF-96A1-4E71959CCC64}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Registrar Pedidos"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Pedido(&#xA;&#x9;&#x9;&#x9;&#x9;   id_Cliente, &#xA;&#x9;&#x9;&#x9;&#x9;   cod_Pedido, &#xA;&#x9;&#x9;&#x9;&#x9;   origem_Pedido,&#xA;&#x9;&#x9;&#x9;&#x9;   endereco, &#xA;&#x9;&#x9;&#x9;&#x9;   cep, &#xA;&#x9;&#x9;&#x9;&#x9;   uf, &#xA;&#x9;&#x9;&#x9;&#x9;   pais, &#xA;&#x9;&#x9;&#x9;&#x9;   data_Pedido)&#xA;&#xA;SELECT DISTINCT&#xA;&#x9;TCL.id_Cliente,&#xA;&#x9;cod_pedido,&#xA;&#x9;origem_pedido,&#xA;&#x9;endereco,&#xA;&#x9;cep,&#xA;&#x9;uf,&#xA;&#x9;pais,&#xA;&#x9;dataPedido&#xA;FROM&#xA;&#x9;Carga TC&#xA;INNER JOIN Cliente TCL ON TCL.email=TC.email&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Registrar Produtos"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Tarefa Executar SQL"
-      DTS:Disabled="True"
-      DTS:DTSID="{5FCB12BF-E0C8-4656-9021-165C48E1DB61}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Registrar Produtos"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
-          SQLTask:SqlStatementSource="INSERT INTO Produto (nome, codigo)&#xA;SELECT DISTINCT &#xA;&#x9;TC.nomeProduto,&#xA;&#x9;TC.codigoProduto&#xA;FROM Carga TC&#xA;LEFT JOIN&#xA;&#x9;Produto TP ON TC.codigoProduto = TP.codigo&#xA;WHERE&#xA;&#x9;TP.codigo IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Tarefa Fluxo de Dados"
+      DTS:refId="Package\Preencher Carga com os novos dados"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
       DTS:DTSID="{DF42FA8B-07BB-43EE-842B-F202E5836BF6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Tarefa Fluxo de Dados"
+      DTS:ObjectName="Preencher Carga com os novos dados"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -1112,11 +377,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET"
+              refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;2"
               description="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC."
-              name="Destino do ADO NET"
+              name="Inserindo na Tabela Carga"
               usesDispositions="true"
               version="2">
               <properties>
@@ -1125,7 +390,7 @@
                   description="O nome da tabela de banco de dados de Destino."
                   expressionType="Notify"
                   name="TableOrViewName"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Carga"</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"Carga"</property>
                 <property
                   dataType="System.Int32"
                   description="Especifique o número de linhas por lote. O padrão é 0, que usa o mesmo tamanho que o buffer interno SSIS. "
@@ -1140,14 +405,14 @@
                   dataType="System.Boolean"
                   description="Especifica se a interface SqlBulkCopy deve ser usada para melhorar o desempenho de operações de inserção em massa. Somente determinados provedores oferecem suporte a essa interface."
                   expressionType="Notify"
-                  name="UseBulkInsertWhenPossible">false</property>
+                  name="UseBulkInsertWhenPossible">true</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ADONETDestination</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Connections[IDbConnection]"
+                  refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Connections[IDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
                   connectionManagerRefId="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
                   description="Gerenciador de conexões gerenciadas"
@@ -1155,267 +420,269 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]"
+                  refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET]"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de Destino ADO NET">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[order-id]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[order-id]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="order-id"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[order-item-id]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[order-item-id]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="order-item-id"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[purchase-date]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[purchase-date]"
                       cachedDataType="date"
                       cachedName="purchase-date"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[payments-date]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[payments-date]"
                       cachedDataType="date"
                       cachedName="payments-date"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-email]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[buyer-email]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="buyer-email"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-name]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[buyer-name]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="buyer-name"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[cpf]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[cpf]"
                       cachedDataType="wstr"
                       cachedLength="11"
                       cachedName="cpf"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-phone-number]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[buyer-phone-number]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="buyer-phone-number"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[sku]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[sku]"
                       cachedDataType="wstr"
                       cachedLength="25"
                       cachedName="sku"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[upc]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[upc]"
                       cachedDataType="wstr"
                       cachedLength="25"
                       cachedName="upc"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[product-name]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[product-name]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="product-name"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[quantity-purchased]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[quantity-purchased]"
                       cachedDataType="ui1"
                       cachedName="quantity-purchased"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[currency]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[currency]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="currency"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[item-price]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[item-price]"
                       cachedDataType="r4"
                       cachedName="item-price"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-service-level]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-service-level]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="ship-service-level"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-1]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-address-1]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="ship-address-1"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-2]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-address-2]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="ship-address-2"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-3]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-address-3]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="ship-address-3"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-city]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-city]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="ship-city"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-state]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-state]"
                       cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="ship-state"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-postal-code]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-postal-code]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="ship-postal-code"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]" />
                     <inputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-country]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].Columns[ship-country]"
                       cachedDataType="wstr"
                       cachedLength="2"
                       cachedName="ship-country"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]" />
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
                       dataType="wstr"
                       length="10"
                       name="order-id" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
                       dataType="wstr"
                       length="10"
                       name="order-item-id" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
                       dataType="dbTimeStamp"
                       name="purchase-date" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
                       dataType="dbTimeStamp"
                       name="payments-date" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
                       dataType="wstr"
                       length="200"
                       name="buyer-email" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
                       dataType="wstr"
                       length="200"
                       name="buyer-name" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
                       dataType="wstr"
                       length="11"
                       name="cpf" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
                       dataType="wstr"
                       length="20"
                       name="buyer-phone-number" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
                       dataType="wstr"
                       length="25"
                       name="sku" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
                       dataType="wstr"
                       length="25"
                       name="upc" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
                       dataType="wstr"
                       length="200"
                       name="product-name" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
-                      dataType="i2"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
+                      dataType="ui1"
                       name="quantity-purchased" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
                       dataType="wstr"
                       length="3"
                       name="currency" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
-                      dataType="r4"
-                      name="item-price" />
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
+                      dataType="numeric"
+                      name="item-price"
+                      precision="19"
+                      scale="255" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
                       dataType="wstr"
                       length="50"
                       name="ship-service-level" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-1" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-2" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-3" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
                       dataType="wstr"
                       length="200"
                       name="ship-city" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
                       dataType="wstr"
                       length="200"
                       name="ship-state" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
                       dataType="wstr"
                       length="20"
                       name="ship-postal-code" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
                       dataType="wstr"
                       length="2"
                       name="ship-country" />
@@ -1424,22 +691,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET]"
+                  refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Outputs[Saída de Erro de Destino ADO NET]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Saída de Erro de Destino ADO NET"
-                  synchronousInputId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]">
+                  synchronousInputId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      lineageId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      refId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      lineageId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1448,12 +715,12 @@
               </outputs>
             </component>
             <component
-              refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
+              refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
               description="Origem de Arquivo Simples"
               localeId="1046"
-              name="Origem de Arquivo Simples"
+              name="Recebendo dados do Arquivo"
               usesDispositions="true"
               version="1">
               <properties>
@@ -1468,24 +735,24 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Connections[FlatFileConnection]"
+                  refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Connections[FlatFileConnection]"
                   connectionManagerID="Package.ConnectionManagers[Carga Atualizada]"
                   connectionManagerRefId="Package.ConnectionManagers[Carga Atualizada]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
+                  refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples]"
                   name="Saída de Origem de Arquivo Simples">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
                       length="10"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
                       name="order-id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1500,13 +767,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
                       length="10"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
                       name="order-item-id"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1521,12 +788,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
                       dataType="date"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
                       name="purchase-date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1541,12 +808,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
                       dataType="date"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
                       name="payments-date"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1561,13 +828,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
                       name="buyer-email"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1582,13 +849,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
                       name="buyer-name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1603,13 +870,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
                       length="11"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
                       name="cpf"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1624,13 +891,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
                       length="20"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
                       name="buyer-phone-number"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1645,13 +912,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
                       length="25"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
                       name="sku"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1666,13 +933,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
                       length="25"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
                       name="upc"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1687,13 +954,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
                       name="product-name"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1708,12 +975,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
                       dataType="ui1"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
                       name="quantity-purchased"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1728,13 +995,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
                       length="3"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
                       name="currency"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1749,12 +1016,12 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
                       name="item-price"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1769,13 +1036,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
                       length="50"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
                       name="ship-service-level"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1790,13 +1057,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
                       name="ship-address-1"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1811,13 +1078,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
                       name="ship-address-2"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1832,13 +1099,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
                       name="ship-address-3"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1853,13 +1120,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
                       name="ship-city"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1874,13 +1141,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
                       length="200"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
                       name="ship-state"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1895,13 +1162,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
                       length="20"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
                       name="ship-postal-code"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1916,13 +1183,13 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversão"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
+                      externalMetadataColumnId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
                       length="2"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
                       name="ship-country"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1940,135 +1207,135 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
                       dataType="wstr"
                       length="10"
                       name="order-id" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
                       dataType="wstr"
                       length="10"
                       name="order-item-id" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
                       dataType="date"
                       name="purchase-date" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
                       dataType="date"
                       name="payments-date" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
                       dataType="wstr"
                       length="200"
                       name="buyer-email" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
                       dataType="wstr"
                       length="200"
                       name="buyer-name" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
                       dataType="wstr"
                       length="11"
                       name="cpf" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
                       dataType="wstr"
                       length="20"
                       name="buyer-phone-number" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
                       dataType="wstr"
                       length="25"
                       name="sku" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
                       dataType="wstr"
                       length="25"
                       name="upc" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
                       dataType="wstr"
                       length="200"
                       name="product-name" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
                       dataType="ui1"
                       name="quantity-purchased" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
                       dataType="wstr"
                       length="3"
                       name="currency" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
                       dataType="r4"
                       name="item-price" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
                       dataType="wstr"
                       length="50"
                       name="ship-service-level" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-1" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-2" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
                       dataType="wstr"
                       length="200"
                       name="ship-address-3" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
                       dataType="wstr"
                       length="200"
                       name="ship-city" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
                       dataType="wstr"
                       length="200"
                       name="ship-state" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
                       dataType="wstr"
                       length="20"
                       name="ship-postal-code" />
                     <externalMetadataColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
                       dataType="wstr"
                       length="2"
                       name="ship-country" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples]"
                   isErrorOut="true"
                   name="Saída de Erro de Origem de Arquivo Simples">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
                       codePage="65001"
                       dataType="text"
                       description="Coluna de Saída de Erro de Origem de Arquivo Simples"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
                       name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      refId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      lineageId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2079,10 +1346,10 @@
           </components>
           <paths>
             <path
-              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
-              endId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]"
+              refId="Package\Preencher Carga com os novos dados.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga.Inputs[Entrada de Destino ADO NET]"
               name="Saída de Origem de Arquivo Simples"
-              startId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
+              startId="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo.Outputs[Saída de Origem de Arquivo Simples]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2092,43 +1359,51 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição]"
       DTS:CreationName=""
-      DTS:DTSID="{94313C5B-A3A2-4460-84A2-7725C77DE190}"
-      DTS:From="Package\Limpar Carga"
+      DTS:DTSID="{0D6C9341-C08B-406E-9CB6-A664E5F2971C}"
+      DTS:From="Package\Inserir Clientes"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição"
-      DTS:To="Package\Importar para Carga" />
+      DTS:To="Package\Inserir Produtos" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 1]"
       DTS:CreationName=""
-      DTS:DTSID="{1ACE1138-89F9-4D82-BF70-4A1CA53311CC}"
-      DTS:From="Package\Importar para Carga"
+      DTS:DTSID="{264A2ACA-6D62-4A9B-B321-392A17B15FBF}"
+      DTS:From="Package\Inserir Produtos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 1"
-      DTS:To="Package\Registrar Clientes" />
+      DTS:To="Package\Inserir Pedidos" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
       DTS:CreationName=""
-      DTS:DTSID="{E4D8F3FD-358C-4BB3-A207-F4549F22FFC7}"
-      DTS:From="Package\Registrar Clientes"
+      DTS:DTSID="{31E96D8C-6E68-40FB-A3FB-C299DD417041}"
+      DTS:From="Package\Inserir Pedidos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 2"
-      DTS:To="Package\Registrar Produtos" />
+      DTS:To="Package\Inserir Item Pedido" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 3]"
       DTS:CreationName=""
-      DTS:DTSID="{FE3C6A81-2CEB-43C2-9215-69AF78FE7CBE}"
-      DTS:From="Package\Registrar Produtos"
+      DTS:DTSID="{C44CDE56-138A-41AB-B833-DDEDE3B36E17}"
+      DTS:From="Package\Inserir Item Pedido"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 3"
-      DTS:To="Package\Registrar Pedidos" />
+      DTS:To="Package\Atualizar Valor Total em Pedidos" />
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Restrição 4]"
+      DTS:refId="Package.PrecedenceConstraints[Restrição 5]"
       DTS:CreationName=""
-      DTS:DTSID="{41E3E342-0B27-487F-AF94-FD202391BD82}"
-      DTS:From="Package\Registrar Pedidos"
+      DTS:DTSID="{DB7F4DE0-F295-42FB-A588-C1804F312508}"
+      DTS:From="Package\Limpar Tabela Caraga"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Restrição 4"
-      DTS:To="Package\Registrar Itens dos Pedidos" />
+      DTS:ObjectName="Restrição 5"
+      DTS:To="Package\Preencher Carga com os novos dados" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{76B6CE0B-936F-4585-BCF7-B8D0A761A7E6}"
+      DTS:From="Package\Preencher Carga com os novos dados"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 6"
+      DTS:To="Package\Inserir Clientes" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -2143,59 +1418,79 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="178,42"
-          Id="Package\Importar para Carga"
-          TopLeft="74,121" />
+          Size="266,42"
+          Id="Package\Preencher Carga com os novos dados"
+          TopLeft="28.0699300699303,80.8391608391601" />
         <NodeLayout
-          Size="146,42"
-          Id="Package\Limpar Carga"
-          TopLeft="95.897435897436,65.1025641025641" />
+          Size="188,42"
+          Id="Package\Limpar Tabela Caraga"
+          TopLeft="59.3846153846159,14.3076923076923" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 5]"
+          TopLeft="157.227272727271,56.3076923076923">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.5314685314679"
+              Start="0,0"
+              End="0,17.0314685314679">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.0314685314679" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="166,42"
-          Id="Package\Registrar Clientes"
-          TopLeft="84,186" />
+          Size="152,42"
+          Id="Package\Inserir Clientes"
+          TopLeft="79.2307692307694,148.461538461538" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 6]"
+          TopLeft="158.150349650347,122.83916083916">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.622377622378"
+              Start="0,0"
+              End="0,18.122377622378">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.122377622378" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <NodeLayout
-          Size="214,42"
-          Id="Package\Registrar Itens dos Pedidos"
-          TopLeft="55,402" />
-        <NodeLayout
-          Size="166,42"
-          Id="Package\Registrar Pedidos"
-          TopLeft="79,328" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Registrar Produtos"
-          TopLeft="77.9999999999999,260.923076923077" />
-        <NodeLayout
-          Size="191,42"
-          Id="Package\Tarefa Fluxo de Dados"
-          TopLeft="353.454545454545,290.454545454545" />
+          Size="157,42"
+          Id="Package\Inserir Produtos"
+          TopLeft="76.1538461538464,216.923076923077" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
-          TopLeft="241.897435897436,86.1025641025641">
+          TopLeft="154.942307692306,190.461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.102564102564,55.8974358974359"
+              EndConnector="0,26.4615384615384"
               Start="0,0"
-              End="17.602564102564,55.8974358974359">
+              End="0,18.9615384615384">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="28.602564102564,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="28.602564102564,0"
-                    Point2="32.602564102564,0"
-                    Point3="32.602564102564,4" />
-                  <mssgle:LineSegment
-                    End="32.602564102564,51.8974358974359" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.602564102564,51.8974358974359"
-                    Point2="32.602564102564,55.8974358974359"
-                    Point3="28.602564102564,55.8974358974359" />
-                  <mssgle:LineSegment
-                    End="17.602564102564,55.8974358974359" />
+                    End="0,18.9615384615384" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2204,20 +1499,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Inserir Pedidos"
+          TopLeft="76.9230769230771,283.076923076923" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 1]"
-          TopLeft="165,163">
+          TopLeft="153.78846153846,258.923076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,23"
+              EndConnector="0,24.1538461538464"
               Start="0,0"
-              End="0,15.5">
+              End="0,16.6538461538464">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,15.5" />
+                    End="0,16.6538461538464" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2226,20 +1525,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Inserir Item Pedido"
+          TopLeft="66.1538461538467,353.076923076923" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="165.25,228">
+          TopLeft="152.28846153846,325.076923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,32.923076923077"
+              EndConnector="0,28"
               Start="0,0"
-              End="0,25.423076923077">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.423076923077" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2248,42 +1551,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Atualizar Valor Total em Pedidos"
+          TopLeft="280.769230769231,356.153846153846" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="162.75,302.923076923077">
+          TopLeft="237.153846153847,375.615384615385">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25.076923076923"
+              EndConnector="43.6153846153839,0"
               Start="0,0"
-              End="0,17.576923076923">
+              End="36.1153846153839,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.576923076923" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 4]"
-          TopLeft="162,370">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
+                    End="36.1153846153839,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2296,85 +1581,32 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Importar para Carga">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="159,42"
-          Id="Package\Importar para Carga\Carregar Tabela"
-          TopLeft="176,354" />
-        <NodeLayout
-          Size="213,42"
-          Id="Package\Importar para Carga\Origem de Arquivo Simples"
-          TopLeft="152,183" />
-        <EdgeLayout
-          Id="Package\Importar para Carga.Paths[Saída de Origem de Arquivo Simples]"
-          TopLeft="257,225">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,129"
-              Start="0,0"
-              End="0,121.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,121.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Importar para Carga\Carregar Tabela">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Tarefa Fluxo de Dados">
+    design-time-name="Package\Preencher Carga com os novos dados">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183,42"
-          Id="Package\Tarefa Fluxo de Dados\Destino do ADO NET"
-          TopLeft="219,267" />
+          Size="224,42"
+          Id="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo"
+          TopLeft="56.2307692307693,66.3846153846154" />
         <NodeLayout
-          Size="213,42"
-          Id="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
-          TopLeft="198,170" />
+          Size="209,42"
+          Id="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga"
+          TopLeft="62.3076923076924,151.153846153846" />
         <EdgeLayout
-          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
-          TopLeft="307.5,212">
+          Id="Package\Preencher Carga com os novos dados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="167.519230769231,108.384615384615">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,55"
+              EndConnector="0,42.7692307692308"
               Start="0,0"
-              End="0,47.5">
+              End="0,35.2692307692308">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.5" />
+                    End="0,35.2692307692308" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2387,7 +1619,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarefa Fluxo de Dados\Destino do ADO NET">
+    design-time-name="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
