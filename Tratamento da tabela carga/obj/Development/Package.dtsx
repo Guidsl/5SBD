@@ -11,11 +11,240 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{2159E132-F1AC-405A-B4CB-7B23092A4DFC}">
+  DTS:VersionBuild="116"
+  DTS:VersionGUID="{654AE5D7-9A39-4485-833A-62CBCD716A9C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+      DTS:ObjectName="bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=bazartemtudoserver.database.windows.net;User ID=bazartemtudoadm;Initial Catalog=BD_BazarTemTudo;Persist Security Info=True;Application Name=&quot;SSIS-Package-{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1&quot;;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACg4cwDZaqnq/BJf2dvqSozlxQpmYVeNq0ncdAheXfePgAAAAAOgAAAAAIAACAAAAB9Paamefwy749TJ5Uxu1+mHhf2gJrcSeL+4u/xCwqRiSAAAAAA1pvYiY7R4MPDb19e6L5iCB9Qe6us3TGOta0VZWGpIkAAAACqflEwG2NZKs2z8vOrugCgnDhcxOwC6rF2pwhbHC1tbgVhxefPqn//pLsWgrJFEARdYemSzAv+xt1hu5w4Bhbf</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Carga Atualizada]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D89F8130-D237-4BE5-B43A-BD177ED5450B}"
+      DTS:ObjectName="Carga Atualizada">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\guilh\Desktop\insert_ETL(AV1).txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order-id"
+              DTS:DTSID="{48955092-1701-4C8C-A59F-B165DA948A17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="order-item-id"
+              DTS:DTSID="{30419635-0D96-46B0-B1A0-175A36665BC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="purchase-date"
+              DTS:DTSID="{A05F56B9-AE40-4D31-B3F0-E5EF9532D26F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="payments-date"
+              DTS:DTSID="{BD92D323-2E2E-402A-A001-2FE8846C243E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="buyer-email"
+              DTS:DTSID="{BEC606D1-27FF-44DE-9798-BE32A133929B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="buyer-name"
+              DTS:DTSID="{4A0608CB-2480-4112-B10A-9B833E9A3250}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cpf"
+              DTS:DTSID="{C1C9590A-213B-4B0C-B416-E96E32A3F244}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="buyer-phone-number"
+              DTS:DTSID="{82C76A9E-4D44-4B56-8D02-390E60D48D7F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sku"
+              DTS:DTSID="{DF43F2F0-2F61-4065-814A-ABE70946AB3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="upc"
+              DTS:DTSID="{2693DEBA-1AF5-455F-9ADD-1B04F491EBF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product-name"
+              DTS:DTSID="{40476E3F-53B9-46A9-96F4-32F5D6BFBFEC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="17"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantity-purchased"
+              DTS:DTSID="{AD557DCF-643C-47C5-B790-1E0D6DE4C60A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="currency"
+              DTS:DTSID="{9301D551-BFBF-4FDD-8C20-F3D190110E3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="item-price"
+              DTS:DTSID="{C46751C4-6370-4136-AD9A-D13273006D97}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-service-level"
+              DTS:DTSID="{1FAA2F68-60E7-4434-A4E4-6FD1F433A3A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-address-1"
+              DTS:DTSID="{F13C4F86-DD69-4D86-9459-2DC7A3161ED7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-address-2"
+              DTS:DTSID="{2FA0C181-5C2B-4DD9-8F44-2F86CE5E5042}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-address-3"
+              DTS:DTSID="{BC4D2684-D345-45E6-97D4-FF5BC3989833}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-city"
+              DTS:DTSID="{6E278750-42B5-48D0-8D7E-5372014315E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-state"
+              DTS:DTSID="{A4890124-5679-40C6-96E7-38D072C6D3DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-postal-code"
+              DTS:DTSID="{D66F2C54-9654-44C2-B68C-8AC3BA5E238E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-country"
+              DTS:DTSID="{3FC47F4C-AE14-4DFC-97D3-BAE076E77831}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-A2POI3V\MSSQLSERVER03.DB_Vendas]"
       DTS:CreationName="OLEDB"
@@ -28,157 +257,6 @@
           DTS:ConnectionString="Data Source=DESKTOP-A2POI3V\MSSQLSERVER03;Initial Catalog=DB_Vendas;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}DESKTOP-A2POI3V\MSSQLSERVER03.DB_Vendas;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{F0573D21-F9F5-45A1-938A-02FF5B4FF183}"
-      DTS:ObjectName="Gerenciador de Conexões de Arquivos Simples">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1046"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\guilh\Desktop\insert_ETL.txt">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="codigoProduto"
-              DTS:DTSID="{40D19CBE-9B53-4BFC-9B40-108C56CAC462}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dataPedido"
-              DTS:DTSID="{2AA83CE8-3642-46BD-827F-71FBABFCE868}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="6"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="origem_pedido"
-              DTS:DTSID="{0FA2676E-0ED0-4B0E-B162-FE232094D240}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="cod_pedido"
-              DTS:DTSID="{FC3274C6-C3ED-4D19-90D8-B7968EAE2010}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="nomeProduto"
-              DTS:DTSID="{67B85F88-5519-49CD-8E7E-A9A4D7DCD4A7}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="16"
-              DTS:TextQualified="True"
-              DTS:ObjectName="qtd"
-              DTS:DTSID="{A806864D-DACE-4E96-BAA6-B59D983D93CA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="4"
-              DTS:TextQualified="True"
-              DTS:ObjectName="valor"
-              DTS:DTSID="{6678CB2D-1FCA-4CF5-AC9B-FEE869ADAE1F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="4"
-              DTS:TextQualified="True"
-              DTS:ObjectName="frete"
-              DTS:DTSID="{913AC9E5-8B99-4674-9477-646B01CEC46A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="21"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="email"
-              DTS:DTSID="{A39B8867-95F3-4C8B-884C-72A3E49FBDFA}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="17"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="nomeComprador"
-              DTS:DTSID="{F57CC0B2-7C65-4B2D-A09B-805F531D24FE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="25"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="endereco"
-              DTS:DTSID="{19F42FF4-9969-4C17-A38D-204CCE37A35A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="9"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="cep"
-              DTS:DTSID="{B17BC93F-EE0D-4E04-A031-084D460F7921}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="2"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="uf"
-              DTS:DTSID="{170FEDAE-9124-4651-8C75-C9F797CAC4EE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="6"
-              DTS:DataType="130"
-              DTS:TextQualified="True"
-              DTS:ObjectName="pais"
-              DTS:DTSID="{EEAFEDEF-1BEE-45CA-846D-C257A66D6B1C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="4"
-              DTS:TextQualified="True"
-              DTS:ObjectName="imposto"
-              DTS:DTSID="{45E0B25E-1E49-4D32-9B57-BA6571B33E9C}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
@@ -186,6 +264,7 @@
       DTS:refId="Package\Importar para Carga"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{E2C7B3DD-4A23-44DA-86C7-861A3EDA03C6}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -492,8 +571,8 @@
               <connections>
                 <connection
                   refId="Package\Importar para Carga\Origem de Arquivo Simples.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
-                  connectionManagerRefId="Package.ConnectionManagers[Gerenciador de Conexões de Arquivos Simples]"
+                  connectionManagerID="{F0573D21-F9F5-45A1-938A-02FF5B4FF183}:invalid"
+                  connectionManagerRefId="{F0573D21-F9F5-45A1-938A-02FF5B4FF183}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -932,6 +1011,7 @@
       DTS:refId="Package\Limpar Carga"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{558E5962-6239-4DDF-8889-BB0B3215E35C}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -949,6 +1029,7 @@
       DTS:refId="Package\Registrar Clientes"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{D30A25CB-EB78-4D6A-8BF1-F50D33CF4E41}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -966,6 +1047,7 @@
       DTS:refId="Package\Registrar Itens dos Pedidos"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{FA0B12D9-A0F4-49C4-95D3-0000400E7ED1}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -983,6 +1065,7 @@
       DTS:refId="Package\Registrar Pedidos"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{6009515C-5553-42DF-96A1-4E71959CCC64}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1000,6 +1083,7 @@
       DTS:refId="Package\Registrar Produtos"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
+      DTS:Disabled="True"
       DTS:DTSID="{5FCB12BF-E0C8-4656-9021-165C48E1DB61}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1011,6 +1095,996 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}"
           SQLTask:SqlStatementSource="INSERT INTO Produto (nome, codigo)&#xA;SELECT DISTINCT &#xA;&#x9;TC.nomeProduto,&#xA;&#x9;TC.codigoProduto&#xA;FROM Carga TC&#xA;LEFT JOIN&#xA;&#x9;Produto TP ON TC.codigoProduto = TP.codigo&#xA;WHERE&#xA;&#x9;TP.codigo IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarefa Fluxo de Dados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{DF42FA8B-07BB-43EE-842B-F202E5836BF6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarefa Fluxo de Dados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;2"
+              description="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC."
+              name="Destino do ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="O nome da tabela de banco de dados de Destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Carga"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique o número de linhas por lote. O padrão é 0, que usa o mesmo tamanho que o buffer interno SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="O número de segundos antes de o tempo limite de um comando ser alcançado. Um valor de 0 indica um tempo limite infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se a interface SqlBulkCopy deve ser usada para melhorar o desempenho de operações de inserção em massa. Somente determinados provedores oferecem suporte a essa interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  description="Gerenciador de conexões gerenciadas"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[order-id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="order-id"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[order-item-id]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="order-item-id"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[purchase-date]"
+                      cachedDataType="date"
+                      cachedName="purchase-date"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[payments-date]"
+                      cachedDataType="date"
+                      cachedName="payments-date"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-email]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="buyer-email"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="buyer-name"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[cpf]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="cpf"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[buyer-phone-number]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="buyer-phone-number"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[sku]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="sku"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[upc]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="upc"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[product-name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="product-name"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[quantity-purchased]"
+                      cachedDataType="ui1"
+                      cachedName="quantity-purchased"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[currency]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="currency"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[item-price]"
+                      cachedDataType="r4"
+                      cachedName="item-price"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-service-level]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ship-service-level"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-1]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ship-address-1"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-2]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ship-address-2"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-address-3]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ship-address-3"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-city]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ship-city"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-state]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ship-state"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-postal-code]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="ship-postal-code"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]" />
+                    <inputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].Columns[ship-country]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="ship-country"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-id]"
+                      dataType="wstr"
+                      length="10"
+                      name="order-id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[order-item-id]"
+                      dataType="wstr"
+                      length="10"
+                      name="order-item-id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[purchase-date]"
+                      dataType="dbTimeStamp"
+                      name="purchase-date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[payments-date]"
+                      dataType="dbTimeStamp"
+                      name="payments-date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-email]"
+                      dataType="wstr"
+                      length="200"
+                      name="buyer-email" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="buyer-name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[cpf]"
+                      dataType="wstr"
+                      length="11"
+                      name="cpf" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[buyer-phone-number]"
+                      dataType="wstr"
+                      length="20"
+                      name="buyer-phone-number" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[sku]"
+                      dataType="wstr"
+                      length="25"
+                      name="sku" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity-purchased]"
+                      dataType="i2"
+                      name="quantity-purchased" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[currency]"
+                      dataType="wstr"
+                      length="3"
+                      name="currency" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[item-price]"
+                      dataType="r4"
+                      name="item-price" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-service-level]"
+                      dataType="wstr"
+                      length="50"
+                      name="ship-service-level" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-1]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-2]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-address-3]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-3" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-city]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-city" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-state]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-state" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-postal-code]"
+                      dataType="wstr"
+                      length="20"
+                      name="ship-postal-code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET].ExternalColumns[ship-country]"
+                      dataType="wstr"
+                      length="2"
+                      name="ship-country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino ADO NET"
+                  synchronousInputId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Origem de Arquivo Simples"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Carga Atualizada]"
+                  connectionManagerRefId="Package.ConnectionManagers[Carga Atualizada]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
+                      length="10"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-id]"
+                      name="order-id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
+                      length="10"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[order-item-id]"
+                      name="order-item-id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[purchase-date]"
+                      name="purchase-date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[payments-date]"
+                      name="payments-date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-email]"
+                      name="buyer-email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-name]"
+                      name="buyer-name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
+                      length="11"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cpf]"
+                      name="cpf"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
+                      length="20"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[buyer-phone-number]"
+                      name="buyer-phone-number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
+                      length="25"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[sku]"
+                      name="sku"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      length="25"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      name="upc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      name="product-name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[quantity-purchased]"
+                      name="quantity-purchased"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
+                      length="3"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[currency]"
+                      name="currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[item-price]"
+                      name="item-price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
+                      length="50"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-service-level]"
+                      name="ship-service-level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-1]"
+                      name="ship-address-1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-2]"
+                      name="ship-address-2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-address-3]"
+                      name="ship-address-3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-city]"
+                      name="ship-city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
+                      length="200"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-state]"
+                      name="ship-state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
+                      length="20"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-postal-code]"
+                      name="ship-postal-code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
+                      length="2"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[ship-country]"
+                      name="ship-country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-id]"
+                      dataType="wstr"
+                      length="10"
+                      name="order-id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[order-item-id]"
+                      dataType="wstr"
+                      length="10"
+                      name="order-item-id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[purchase-date]"
+                      dataType="date"
+                      name="purchase-date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[payments-date]"
+                      dataType="date"
+                      name="payments-date" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-email]"
+                      dataType="wstr"
+                      length="200"
+                      name="buyer-email" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="buyer-name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[cpf]"
+                      dataType="wstr"
+                      length="11"
+                      name="cpf" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[buyer-phone-number]"
+                      dataType="wstr"
+                      length="20"
+                      name="buyer-phone-number" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[sku]"
+                      dataType="wstr"
+                      length="25"
+                      name="sku" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[quantity-purchased]"
+                      dataType="ui1"
+                      name="quantity-purchased" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[currency]"
+                      dataType="wstr"
+                      length="3"
+                      name="currency" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[item-price]"
+                      dataType="r4"
+                      name="item-price" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-service-level]"
+                      dataType="wstr"
+                      length="50"
+                      name="ship-service-level" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-1]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-2]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-2" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-address-3]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-address-3" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-city]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-city" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-state]"
+                      dataType="wstr"
+                      length="200"
+                      name="ship-state" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-postal-code]"
+                      dataType="wstr"
+                      length="20"
+                      name="ship-postal-code" />
+                    <externalMetadataColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[ship-country]"
+                      dataType="wstr"
+                      length="2"
+                      name="ship-country" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Tarefa Fluxo de Dados\Destino do ADO NET.Inputs[Entrada de Destino ADO NET]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1075,7 +2149,7 @@
         <NodeLayout
           Size="146,42"
           Id="Package\Limpar Carga"
-          TopLeft="106.897435897436,35.1025641025641" />
+          TopLeft="113.897435897436,48.1025641025641" />
         <NodeLayout
           Size="166,42"
           Id="Package\Registrar Clientes"
@@ -1092,20 +2166,36 @@
           Size="171,42"
           Id="Package\Registrar Produtos"
           TopLeft="95.9999999999999,243.923076923077" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarefa Fluxo de Dados"
+          TopLeft="404.454545454545,386.454545454545" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
-          TopLeft="180.448717948718,77.1025641025641">
+          TopLeft="259.897435897436,69.1025641025641">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.8974358974359"
+              EndConnector="10.102564102564,55.8974358974359"
               Start="0,0"
-              End="0,19.3974358974359">
+              End="17.602564102564,55.8974358974359">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.3974358974359" />
+                    End="28.602564102564,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.602564102564,0"
+                    Point2="32.602564102564,0"
+                    Point3="32.602564102564,4" />
+                  <mssgle:LineSegment
+                    End="32.602564102564,51.8974358974359" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.602564102564,51.8974358974359"
+                    Point2="32.602564102564,55.8974358974359"
+                    Point3="28.602564102564,55.8974358974359" />
+                  <mssgle:LineSegment
+                    End="17.602564102564,55.8974358974359" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1128,6 +2218,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 2]"
+          TopLeft="183.25,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.923076923077"
+              Start="0,0"
+              End="0,25.423076923077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.423076923077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1180,28 +2292,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="183.25,211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.923076923077"
-              Start="0,0"
-              End="0,25.423076923077">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.423076923077" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1209,15 +2299,15 @@
     design-time-name="Package\Importar para Carga">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="213,42"
-          Id="Package\Importar para Carga\Origem de Arquivo Simples"
-          TopLeft="152,183" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="159,42"
           Id="Package\Importar para Carga\Carregar Tabela"
           TopLeft="176,354" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Importar para Carga\Origem de Arquivo Simples"
+          TopLeft="152,183" />
         <EdgeLayout
           Id="Package\Importar para Carga.Paths[Saída de Origem de Arquivo Simples]"
           TopLeft="257,225">
@@ -1237,7 +2327,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1253,6 +2345,52 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Tarefa Fluxo de Dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Tarefa Fluxo de Dados\Destino do ADO NET"
+          TopLeft="219,267" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Tarefa Fluxo de Dados\Origem de Arquivo Simples"
+          TopLeft="198,170" />
+        <EdgeLayout
+          Id="Package\Tarefa Fluxo de Dados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="307.5,212">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarefa Fluxo de Dados\Destino do ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
