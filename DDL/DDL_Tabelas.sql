@@ -62,3 +62,16 @@ CREATE TABLE ItemPedido (
     FOREIGN KEY ("id-order")   REFERENCES Pedido  ("id-order"),
     FOREIGN KEY ("id-product") REFERENCES Produto ("id-product")
 );
+
+CREATE TABLE Movimento (
+	"id-order" int,
+	"status" nvarchar (15) DEFAULT 'Processing',
+	"compleation-date" date,
+	FOREIGN KEY ("id-order") REFERENCES Pedido ("id-order")
+	);
+
+CREATE TABLE Estoque (
+	"id-product" int,
+	"quantity" int,
+	FOREIGN KEY ("id-product") REFERENCES Produto ("id-product")
+	);
