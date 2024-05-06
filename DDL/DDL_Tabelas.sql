@@ -70,8 +70,14 @@ CREATE TABLE Movimento (
 	FOREIGN KEY ("id-order") REFERENCES Pedido ("id-order")
 	);
 
-CREATE TABLE Estoque (
+CREATE TABLE Estoque(
 	"id-product" int,
 	"quantity" int,
 	FOREIGN KEY ("id-product") REFERENCES Produto ("id-product")
 	);
+
+CREATE TABLE Comprar (
+		      "id-product" int,
+		      "to-buy-quantity" int DEFAULT 0,
+		      FOREIGN KEY ("id-product") REFERENCES Produto ("id-product")
+		      )

@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="151"
-  DTS:VersionGUID="{1E33801C-EEDE-4ACF-A392-E8C5D660C566}">
+  DTS:VersionBuild="157"
+  DTS:VersionGUID="{095C2550-5CEE-4856-B4A3-B84E4BD93B54}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACE/kLHXPvQucDT80HTAcsqrBpwRRA61RiCsoFzoM3ujgAAAAAOgAAAAAIAACAAAADoPGp4fDm69q4W4GYRoJPbIkozegBanydE2mZViGjBxSAAAABvKnCSI74HLoFvGzqdjT1tNcHGXpZOVKQZdFoDJPJr/UAAAABKnRdMvj+R4nbwEn6JNtDQqJa6jSkGCiiWiibWd/fuAJUe3uZc27kZku/AwloxP//s16CpeT3+v1cakZ6YlMOU</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzY1AyMsRwlF6V0MPUVRPMtdVn21IVsmHSNWe7n350dAAAAAAOgAAAAAIAACAAAADDeESZ25k6Yyf83o5dVykIoevvYtPPBmUwDQKE+MRkoCAAAACtC6x5HLjrBwpMCmF+b6LrXf9sCupDgx+GUMLSySO9fEAAAAB8ovGR0M/eseUWKkW1S7kOSw9Zyo/JTOVGK4r3nu+PwzbJ67RytrZXhmZVmnspAiojDHJzpPBQ6vAXw23ZBQyu</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1372,20 +1372,37 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Registrando Produto no Estoque"
+      DTS:refId="Package\Registrando Produto no Estoque e Comprar"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
       DTS:DTSID="{0FD3EA9C-0887-44D4-ADE8-67241E7F6571}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Registrando Produto no Estoque"
+      DTS:ObjectName="Registrando Produto no Estoque e Comprar"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
-          SQLTask:SqlStatementSource="INSERT INTO Estoque (&quot;id-product&quot;)&#xA;SELECT TP.&quot;id-product&quot; from Produto TP&#xA;LEFT JOIN Estoque TE ON TE.&quot;id-product&quot; = TP.&quot;id-product&quot; &#xA;WHERE TE.&quot;id-product&quot; IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO Estoque (&quot;id-product&quot;)&#xA;SELECT TP.&quot;id-product&quot; from Produto TP&#xA;LEFT JOIN Estoque TE ON TE.&quot;id-product&quot; = TP.&quot;id-product&quot; &#xA;WHERE TE.&quot;id-product&quot; IS NULL;&#xA;&#xA;INSERT INTO Comprar (&quot;id-product&quot;)&#xA;SELECT TP.&quot;id-product&quot; from Produto TP&#xA;LEFT JOIN Comprar TC ON TC.&quot;id-product&quot; = TP.&quot;id-product&quot; &#xA;WHERE TC.&quot;id-product&quot; IS NULL;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tratar Pedidos"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{4E276C23-28EA-43F3-9870-AFA70A0D810D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tratar Pedidos"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="DECLARE @PedidoID INT, @QuantidadePedido INT, @ProdutoID INT, @ProdutoExistente INT, @QuantidadeEstoque INT;&#xA;DECLARE pedidos_cursor CURSOR FOR&#xA;SELECT &quot;id-order&quot;, SUM(TIP.&quot;quantity&quot;) AS QuantidadePedido, TIP.&quot;id-product&quot;&#xA;FROM ItemPedido TIP&#xA;GROUP BY TIP.&quot;id-order&quot;, TIP.&quot;id-product&quot;;&#xA;&#xA;OPEN pedidos_cursor;&#xA;FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    -- Verifica se o produto já está na tabela Comprar&#xA;    SELECT @ProdutoExistente = COUNT(*)&#xA;    FROM Comprar&#xA;    WHERE &quot;id-product&quot; = @ProdutoID;&#xA;&#xA;    IF @ProdutoExistente &gt; 0&#xA;    BEGIN&#xA;        -- Atualiza a quantidade necessária para o produto existente&#xA;        UPDATE Comprar&#xA;        SET &quot;to-buy-quantity&quot; = &quot;to-buy-quantity&quot; + @QuantidadePedido&#xA;        WHERE &quot;id-product&quot; = @ProdutoID;&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        -- Insere o produto na tabela Comprar com a quantidade necessária&#xA;        INSERT INTO Comprar (&quot;id-product&quot;, &quot;to-buy-quantity&quot;)&#xA;        VALUES (@ProdutoID, @QuantidadePedido);&#xA;    END;&#xA;&#xA;    -- Verifica se há estoque suficiente para o pedido&#xA;    IF @QuantidadePedido &lt;= @QuantidadeEstoque&#xA;    BEGIN&#xA;        -- Atualiza o status do pedido para 'Shipped'&#xA;        UPDATE Movimento&#xA;        SET &quot;status&quot; = 'Shipped', &quot;compleation-date&quot; = GETDATE()&#xA;        WHERE &quot;id-order&quot; = @PedidoID;&#xA;&#xA;        -- Atualiza a quantidade em estoque após o envio&#xA;        UPDATE Estoque&#xA;        SET &quot;quantity&quot; = @QuantidadeEstoque - @QuantidadePedido&#xA;        WHERE &quot;id-product&quot; = @ProdutoID;&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        -- Atualiza o status do pedido para 'Insufficient Stock'&#xA;        UPDATE Movimento&#xA;        SET &quot;status&quot; = 'On Hold'&#xA;        WHERE &quot;id-order&quot; = @PedidoID;&#xA;    END;&#xA;&#xA;    FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID;&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1429,7 +1446,7 @@
       DTS:From="Package\Atualizar Valor Total em Pedidos"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 4"
-      DTS:To="Package\Registrando Produto no Estoque" />
+      DTS:To="Package\Registrando Produto no Estoque e Comprar" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 5]"
       DTS:CreationName=""
@@ -1450,10 +1467,18 @@
       DTS:refId="Package.PrecedenceConstraints[Restrição 7]"
       DTS:CreationName=""
       DTS:DTSID="{B9E1C14A-6D43-45CC-B9F8-1310E471FDDD}"
-      DTS:From="Package\Registrando Produto no Estoque"
+      DTS:From="Package\Registrando Produto no Estoque e Comprar"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 7"
       DTS:To="Package\Inserindo Pedidos Ordenados em Movimentação" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{E6FB0760-002E-4796-AC21-EC097ADCB0F9}"
+      DTS:From="Package\Inserindo Pedidos Ordenados em Movimentação"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 8"
+      DTS:To="Package\Tratar Pedidos" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -1470,34 +1495,42 @@
         <NodeLayout
           Size="239,42"
           Id="Package\Atualizar Valor Total em Pedidos"
-          TopLeft="36.769230769231,421.153846153846" />
+          TopLeft="64.769230769231,421.153846153846" />
+        <NodeLayout
+          Size="317,42"
+          Id="Package\Inserindo Pedidos Ordenados em Movimentação"
+          TopLeft="26.8888888888889,555" />
         <NodeLayout
           Size="152,42"
           Id="Package\Inserir Clientes"
-          TopLeft="81.2307692307694,148.461538461538" />
+          TopLeft="109.230769230769,148.461538461538" />
         <NodeLayout
           Size="171,42"
           Id="Package\Inserir Item Pedido"
-          TopLeft="68.1538461538467,353.076923076923" />
+          TopLeft="96.1538461538467,353.076923076923" />
         <NodeLayout
           Size="152,42"
           Id="Package\Inserir Pedidos"
-          TopLeft="78.9230769230771,283.076923076923" />
+          TopLeft="106.923076923077,283.076923076923" />
         <NodeLayout
           Size="157,42"
           Id="Package\Inserir Produtos"
-          TopLeft="78.1538461538464,216.923076923077" />
+          TopLeft="106.153846153846,216.923076923077" />
         <NodeLayout
           Size="188,42"
           Id="Package\Limpar Tabela Caraga"
-          TopLeft="61.3846153846159,14.3076923076923" />
+          TopLeft="89.3846153846159,14.3076923076923" />
         <NodeLayout
           Size="266,42"
           Id="Package\Preencher Carga com os novos dados"
-          TopLeft="30.0699300699303,80.8391608391601" />
+          TopLeft="58.0699300699303,80.8391608391601" />
+        <NodeLayout
+          Size="293,42"
+          Id="Package\Registrando Produto no Estoque e Comprar"
+          TopLeft="36.6666666666667,485.777777777778" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
-          TopLeft="156.942307692306,190.461538461538">
+          TopLeft="184.942307692306,190.461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1519,7 +1552,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 1]"
-          TopLeft="155.78846153846,258.923076923077">
+          TopLeft="183.78846153846,258.923076923077">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1541,7 +1574,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 2]"
-          TopLeft="154.28846153846,325.076923076923">
+          TopLeft="182.28846153846,325.076923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1563,7 +1596,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 3]"
-          TopLeft="154.961538461539,395.076923076923">
+          TopLeft="182.961538461539,395.076923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1584,8 +1617,30 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 4]"
+          TopLeft="183.717948717949,463.153846153846">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,22.6239316239319"
+              Start="0,0"
+              End="0,15.1239316239319">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.1239316239319" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 5]"
-          TopLeft="159.227272727271,56.3076923076923">
+          TopLeft="187.227272727271,56.3076923076923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1607,7 +1662,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 6]"
-          TopLeft="160.150349650347,122.83916083916">
+          TopLeft="188.150349650347,122.83916083916">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1627,24 +1682,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="238,42"
-          Id="Package\Registrando Produto no Estoque"
-          TopLeft="42,488" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 4]"
-          TopLeft="158.634615384616,463.153846153846">
+          Id="Package.PrecedenceConstraints[Restrição 7]"
+          TopLeft="184.277777777778,527.777777777778">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24.846153846154"
+              EndConnector="0,27.2222222222222"
               Start="0,0"
-              End="0,17.346153846154">
+              End="0,19.7222222222222">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.346153846154" />
+                    End="0,19.7222222222222" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1654,23 +1705,23 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="317,42"
-          Id="Package\Inserindo Pedidos Ordenados em Movimentação"
-          TopLeft="0,555" />
+          Size="151,42"
+          Id="Package\Tratar Pedidos"
+          TopLeft="385.833333333333,553.611111111111" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Restrição 7]"
-          TopLeft="159.75,530">
+          Id="Package.PrecedenceConstraints[Restrição 8]"
+          TopLeft="343.888888888889,575.305555555556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,25"
+              EndConnector="41.9444444444445,0"
               Start="0,0"
-              End="0,17.5">
+              End="34.4444444444445,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.5" />
+                    End="34.4444444444445,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
