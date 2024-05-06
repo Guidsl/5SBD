@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="157"
-  DTS:VersionGUID="{095C2550-5CEE-4856-B4A3-B84E4BD93B54}">
+  DTS:VersionBuild="180"
+  DTS:VersionGUID="{676482F8-0B77-42DF-ADEC-213476EFA614}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAzY1AyMsRwlF6V0MPUVRPMtdVn21IVsmHSNWe7n350dAAAAAAOgAAAAAIAACAAAADDeESZ25k6Yyf83o5dVykIoevvYtPPBmUwDQKE+MRkoCAAAACtC6x5HLjrBwpMCmF+b6LrXf9sCupDgx+GUMLSySO9fEAAAAB8ovGR0M/eseUWKkW1S7kOSw9Zyo/JTOVGK4r3nu+PwzbJ67RytrZXhmZVmnspAiojDHJzpPBQ6vAXw23ZBQyu</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAADLtSlVSpcUe48Jf4FuLTLAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrmmKAwxyz9scX0BQVs4OjizOxHb1TcWyrawc6yxI1bgAAAAAOgAAAAAIAACAAAADzPmGnsUaHy+QnvDNRAUXwl21T7kkzf91IfFhYpClMiiAAAAANtU1KdZtc2RKnDXHXShCv3ZeDKXOo+Z56VXgf2/2tmkAAAADDB1mzxQm9zp3M8qS3xMSn6fXw9w88I8aRF+T9H66I9MrXAYGiQVtvCyrzjDh+jSENwAKRF6Fve07ZyIiWKbSY</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -45,7 +45,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="C:\Users\guilh\Desktop\insert_ETL(AV1).txt">
+          DTS:ConnectionString="C:\Users\guilh\Desktop\insert_ETL(AV1)teste final.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="order-id"
-              DTS:DTSID="{48955092-1701-4C8C-A59F-B165DA948A17}"
+              DTS:DTSID="{C3D228A2-CF46-4D22-A84A-9C739E26D481}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="order-item-id"
-              DTS:DTSID="{30419635-0D96-46B0-B1A0-175A36665BC3}"
+              DTS:DTSID="{DAF0F5DF-C440-4ADC-874D-2E3E17A302D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -71,7 +71,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="purchase-date"
-              DTS:DTSID="{A05F56B9-AE40-4D31-B3F0-E5EF9532D26F}"
+              DTS:DTSID="{F167DFFC-4921-4326-894B-A328A630C0A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -79,7 +79,7 @@
               DTS:DataType="7"
               DTS:TextQualified="True"
               DTS:ObjectName="payments-date"
-              DTS:DTSID="{BD92D323-2E2E-402A-A001-2FE8846C243E}"
+              DTS:DTSID="{EFD0707C-5C56-496D-B7B0-4AE330DB7141}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -88,7 +88,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="buyer-email"
-              DTS:DTSID="{BEC606D1-27FF-44DE-9798-BE32A133929B}"
+              DTS:DTSID="{3F445D22-2608-44EB-910F-BA3AFB341718}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +97,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="buyer-name"
-              DTS:DTSID="{4A0608CB-2480-4112-B10A-9B833E9A3250}"
+              DTS:DTSID="{31D02068-8857-4504-ADF4-DB562367E987}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -106,7 +106,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="cpf"
-              DTS:DTSID="{C1C9590A-213B-4B0C-B416-E96E32A3F244}"
+              DTS:DTSID="{A02518AE-C377-4E8D-A59E-819F28F4B9F6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -115,7 +115,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="buyer-phone-number"
-              DTS:DTSID="{82C76A9E-4D44-4B56-8D02-390E60D48D7F}"
+              DTS:DTSID="{71DB5F3C-2829-46F2-9989-A4B372126FE0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +124,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="sku"
-              DTS:DTSID="{DF43F2F0-2F61-4065-814A-ABE70946AB3F}"
+              DTS:DTSID="{83AEF043-1071-4344-8257-A88AAA57CFC9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -133,7 +133,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="upc"
-              DTS:DTSID="{2693DEBA-1AF5-455F-9ADD-1B04F491EBF6}"
+              DTS:DTSID="{1C282564-475E-4EF7-9796-898E547F9934}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,7 +142,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="product-name"
-              DTS:DTSID="{40476E3F-53B9-46A9-96F4-32F5D6BFBFEC}"
+              DTS:DTSID="{4B2FC66D-018B-41A5-BD92-5B764640CD21}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -150,7 +150,7 @@
               DTS:DataType="17"
               DTS:TextQualified="True"
               DTS:ObjectName="quantity-purchased"
-              DTS:DTSID="{AD557DCF-643C-47C5-B790-1E0D6DE4C60A}"
+              DTS:DTSID="{03E5F064-9D42-48F4-AE53-23AEB7DD0AF9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -159,7 +159,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="currency"
-              DTS:DTSID="{9301D551-BFBF-4FDD-8C20-F3D190110E3B}"
+              DTS:DTSID="{41067827-2D92-42C7-8195-D397B254EAB1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +167,7 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="item-price"
-              DTS:DTSID="{C46751C4-6370-4136-AD9A-D13273006D97}"
+              DTS:DTSID="{9EA8F22B-45EE-48F1-B45F-8C24DD95D045}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +176,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-service-level"
-              DTS:DTSID="{1FAA2F68-60E7-4434-A4E4-6FD1F433A3A6}"
+              DTS:DTSID="{5BE1F312-6340-453F-B0D4-206C9A990765}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +185,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-address-1"
-              DTS:DTSID="{F13C4F86-DD69-4D86-9459-2DC7A3161ED7}"
+              DTS:DTSID="{EBC49B27-AB8B-4C2E-BA22-074F7B69DD53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,7 +194,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-address-2"
-              DTS:DTSID="{2FA0C181-5C2B-4DD9-8F44-2F86CE5E5042}"
+              DTS:DTSID="{34C4DAB0-3C60-480E-BAE6-8F71958C03DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -203,7 +203,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-address-3"
-              DTS:DTSID="{BC4D2684-D345-45E6-97D4-FF5BC3989833}"
+              DTS:DTSID="{0983AB30-EE67-4F1E-9EEA-63A28838DBDA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -212,7 +212,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-city"
-              DTS:DTSID="{6E278750-42B5-48D0-8D7E-5372014315E2}"
+              DTS:DTSID="{A552400B-8C5E-4C58-AE45-9BD74A5FF173}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -221,7 +221,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-state"
-              DTS:DTSID="{A4890124-5679-40C6-96E7-38D072C6D3DC}"
+              DTS:DTSID="{BCCECA34-0AC1-417E-826C-8D0B1F5B90A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -230,7 +230,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-postal-code"
-              DTS:DTSID="{D66F2C54-9654-44C2-B68C-8AC3BA5E238E}"
+              DTS:DTSID="{864D75BA-A1F6-4A4F-ACE3-29420A51F891}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -239,7 +239,60 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ship-country"
-              DTS:DTSID="{3FC47F4C-AE14-4DFC-97D3-BAE076E77831}"
+              DTS:DTSID="{954D03C9-EFA8-4C26-BEC1-1CAC0F03B614}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Comprar Produtos arquivos]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{528E2298-0183-44BF-9FC0-67089BBEEE8C}"
+      DTS:ObjectName="Comprar Produtos arquivos">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="Compras">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id-product"
+              DTS:DTSID="{6B45C9AC-FF59-4D93-99B7-28923298F5C9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product-name"
+              DTS:DTSID="{A286ECB4-3517-4244-96BB-BE27F605176C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="to-buy-quantity"
+              DTS:DTSID="{A1A9FB82-7546-41DA-A87A-6F5D24E2A782}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="upc"
+              DTS:DTSID="{128FDAA1-AD68-4919-8ABD-F729B3432656}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -255,6 +308,61 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=DESKTOP-A2POI3V\MSSQLSERVER03;Initial Catalog=DB_Vendas;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{30AEAB9C-BF91-4778-B9E5-084173A1D6B7}DESKTOP-A2POI3V\MSSQLSERVER03.DB_Vendas;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Tabela Comprar]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{98A16FEF-A719-4E0C-A92F-22C484D6B17B}"
+      DTS:ObjectName="Tabela Comprar">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:Unicode="True"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\guilh\Desktop\Compras.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id-product"
+              DTS:DTSID="{D6094D79-BC53-41CB-B031-2515FB62FCF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product-name"
+              DTS:DTSID="{446F31DE-7A15-4DAA-A058-275164551C26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="to-buy-quantity"
+              DTS:DTSID="{488FA57C-AB8C-460E-8AEF-CC20D4396741}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="upc"
+              DTS:DTSID="{FC1A1A1A-1585-4DB3-A341-47743E97D56C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -278,6 +386,277 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Emitindo Arquivo com a Lista de Compras"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{5E0FEE68-0675-410E-9BBB-3DF3C1918D3A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Emitindo Arquivo com a Lista de Compras"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="Inserindo em Arquivo para Compra"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Tabela Comprar]"
+                  connectionManagerRefId="Package.ConnectionManagers[Tabela Comprar]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].Columns[id-product]"
+                      cachedDataType="i4"
+                      cachedName="id-product"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[id-product]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[id-product]" />
+                    <inputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].Columns[product-name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="product-name"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[product-name]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[product-name]" />
+                    <inputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].Columns[to-buy-quantity]"
+                      cachedDataType="i4"
+                      cachedName="to-buy-quantity"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[to-buy-quantity]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[to-buy-quantity]" />
+                    <inputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].Columns[upc]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="upc"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[upc]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[upc]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[id-product]"
+                      dataType="i4"
+                      name="id-product" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[to-buy-quantity]"
+                      dataType="i4"
+                      name="to-buy-quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consome dados do SQL Server, OLE DB, ODBC ou Oracle usando o provedor de dados .NET Framework correspondente. Use uma instrução Transact-SQL para definir o conjunto de resultados. Por exemplo, extraia dados do SQL Server com o provedor de dados .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
+              description="Consome dados do SQL Server, OLE DB, ODBC ou Oracle usando o provedor de dados .NET Framework correspondente. Use uma instrução Transact-SQL para definir o conjunto de resultados. Por exemplo, extraia dados do SQL Server com o provedor de dados .NET Framework para SQL Server."
+              name="Recebendo Dados do Banco (Compra)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica a instrução SQL usada pelo componente para extrair os dados."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        TP.[id-product], TP.[product-name], TC.[to-buy-quantity], TP.upc
+FROM            Produto AS TP INNER JOIN
+                         Comprar AS TC ON TC.[id-product] = TP.[id-product]
+WHERE        (TC.[to-buy-quantity] &gt; 0)</property>
+                <property
+                  dataType="System.Int32"
+                  description="O tempo em segundos antes que um comando expire. Zero indica uma expiração infinita."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica a permissão para que as colunas externas que não são de cadeias de caracteres sejam convertidas implicitamente em cadeias de caracteres nas colunas de saída."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="O nome da tabela de banco de dados de Origem."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique o modo para recuperar informações da coluna externa"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  description="Gerenciador de conexões gerenciadas"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET]"
+                  name="Saída do de Origem do ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[id-product]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[id-product]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[id-product]"
+                      name="id-product"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[product-name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[product-name]"
+                      length="200"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[product-name]"
+                      name="product-name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[to-buy-quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[to-buy-quantity]"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[to-buy-quantity]"
+                      name="to-buy-quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[upc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[upc]"
+                      length="25"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].Columns[upc]"
+                      name="upc"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[id-product]"
+                      dataType="i4"
+                      name="id-product" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[to-buy-quantity]"
+                      dataType="i4"
+                      name="to-buy-quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem do ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[id-product]"
+                      dataType="i4"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[id-product]"
+                      name="id-product" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[product-name]"
+                      name="product-name" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[to-buy-quantity]"
+                      dataType="i4"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[to-buy-quantity]"
+                      name="to-buy-quantity" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[upc]"
+                      name="upc" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída de Erro de Origem do ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Emitindo Arquivo com a Lista de Compras.Paths[Saída do de Origem do ADO NET]"
+              endId="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="Saída do de Origem do ADO NET"
+              startId="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra).Outputs[Saída do de Origem do ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Inserindo Pedidos Ordenados em Movimentação"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
@@ -292,6 +671,23 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
           SQLTask:SqlStatementSource="INSERT INTO Movimento (&quot;id-order&quot;) &#xA;SELECT TP.&quot;id-order&quot; FROM Pedido TP &#xA;LEFT JOIN Movimento TM ON TM.&quot;id-order&quot; = TP.&quot;id-order&quot; &#xA;WHERE TM.&quot;id-order&quot; IS NULL &#xA;ORDER BY &quot;total&quot; DESC" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Inserindo Produtos no Estoque"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{8C74D67E-93EB-45E2-964A-ECCF07D6BAD3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Inserindo Produtos no Estoque"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="UPDATE Estoque&#xA;SET Estoque.&quot;quantity&quot; = Estoque.&quot;quantity&quot; + TC.&quot;quantity&quot;&#xA;FROM Produto TP&#xA;INNER JOIN CargaCompras TC ON TC.upc = TP.upc&#xA;WHERE Estoque.&quot;id-product&quot; = TP.&quot;id-product&quot;;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -377,6 +773,23 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
           SQLTask:SqlStatementSource="TRUNCATE TABLE Carga;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpar Tabela Carga das Compras"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarefa Executar SQL"
+      DTS:DTSID="{6ABFF436-3216-4F6E-B527-80BDCB264B2D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpar Tabela Carga das Compras"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE CargaCompras;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1372,6 +1785,319 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Recebendo Produtos Comprados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{A8F2A730-B3A0-43F0-AACA-5F3973493A5C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Recebendo Produtos Comprados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;2"
+              description="Carrega dados em um banco de dados em conformidade com ADO.NET que usa uma tabela ou exibição de banco de dados. Carregue dados em uma tabela nova ou existente. por exemplo, use um provedor ADO.NET para ODBC para carregar dados em um destino ODBC."
+              name="Inserindo na tabela carga de compras"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="O nome da tabela de banco de dados de Destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."CargaCompras"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique o número de linhas por lote. O padrão é 0, que usa o mesmo tamanho que o buffer interno SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="O número de segundos antes de o tempo limite de um comando ser alcançado. Um valor de 0 indica um tempo limite infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se a interface SqlBulkCopy deve ser usada para melhorar o desempenho de operações de inserção em massa. Somente determinados provedores oferecem suporte a essa interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[bazartemtudoserver.database.windows.net.BD_BazarTemTudo.bazartemtudoadm 1]"
+                  description="Gerenciador de conexões gerenciadas"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de Destino ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].Columns[id-product]"
+                      cachedDataType="i4"
+                      cachedName="id-product"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[id-product]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[id-product]" />
+                    <inputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].Columns[product-name]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="product-name"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]" />
+                    <inputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].Columns[upc]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="upc"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]" />
+                    <inputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].Columns[to-buy-quantity]"
+                      cachedDataType="i4"
+                      cachedName="to-buy-quantity"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[to-buy-quantity]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[id-product]"
+                      dataType="i4"
+                      name="id-product" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Outputs[Saída de Erro de Destino ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Saída de Erro de Destino ADO NET"
+                  synchronousInputId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Outputs[Saída de Erro de Destino ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Recebendo dados do Arquivo de Comprar"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Tabela Comprar]"
+                  connectionManagerRefId="Package.ConnectionManagers[Tabela Comprar]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[id-product]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[id-product]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[id-product]"
+                      name="id-product"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      length="200"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[product-name]"
+                      name="product-name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[to-buy-quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[to-buy-quantity]"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[to-buy-quantity]"
+                      name="to-buy-quantity"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      length="25"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].Columns[upc]"
+                      name="upc"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[id-product]"
+                      dataType="i4"
+                      name="id-product" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[product-name]"
+                      dataType="wstr"
+                      length="200"
+                      name="product-name" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[to-buy-quantity]"
+                      dataType="i4"
+                      name="to-buy-quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[upc]"
+                      dataType="wstr"
+                      length="25"
+                      name="upc" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      dataType="nText"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Recebendo Produtos Comprados.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras.Inputs[Entrada de Destino ADO NET]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Registrando Produto no Estoque e Comprar"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarefa Executar SQL"
@@ -1402,7 +2128,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4F2E1EE3-B5B2-4B48-87B0-584157F74F04}"
-          SQLTask:SqlStatementSource="DECLARE @PedidoID INT, @QuantidadePedido INT, @ProdutoID INT, @ProdutoExistente INT, @QuantidadeEstoque INT;&#xA;DECLARE pedidos_cursor CURSOR FOR&#xA;SELECT &quot;id-order&quot;, SUM(TIP.&quot;quantity&quot;) AS QuantidadePedido, TIP.&quot;id-product&quot;&#xA;FROM ItemPedido TIP&#xA;GROUP BY TIP.&quot;id-order&quot;, TIP.&quot;id-product&quot;;&#xA;&#xA;OPEN pedidos_cursor;&#xA;FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    -- Verifica se o produto já está na tabela Comprar&#xA;    SELECT @ProdutoExistente = COUNT(*)&#xA;    FROM Comprar&#xA;    WHERE &quot;id-product&quot; = @ProdutoID;&#xA;&#xA;    IF @ProdutoExistente &gt; 0&#xA;    BEGIN&#xA;        -- Atualiza a quantidade necessária para o produto existente&#xA;        UPDATE Comprar&#xA;        SET &quot;to-buy-quantity&quot; = &quot;to-buy-quantity&quot; + @QuantidadePedido&#xA;        WHERE &quot;id-product&quot; = @ProdutoID;&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        -- Insere o produto na tabela Comprar com a quantidade necessária&#xA;        INSERT INTO Comprar (&quot;id-product&quot;, &quot;to-buy-quantity&quot;)&#xA;        VALUES (@ProdutoID, @QuantidadePedido);&#xA;    END;&#xA;&#xA;    -- Verifica se há estoque suficiente para o pedido&#xA;    IF @QuantidadePedido &lt;= @QuantidadeEstoque&#xA;    BEGIN&#xA;        -- Atualiza o status do pedido para 'Shipped'&#xA;        UPDATE Movimento&#xA;        SET &quot;status&quot; = 'Shipped', &quot;compleation-date&quot; = GETDATE()&#xA;        WHERE &quot;id-order&quot; = @PedidoID;&#xA;&#xA;        -- Atualiza a quantidade em estoque após o envio&#xA;        UPDATE Estoque&#xA;        SET &quot;quantity&quot; = @QuantidadeEstoque - @QuantidadePedido&#xA;        WHERE &quot;id-product&quot; = @ProdutoID;&#xA;    END&#xA;    ELSE&#xA;    BEGIN&#xA;        -- Atualiza o status do pedido para 'Insufficient Stock'&#xA;        UPDATE Movimento&#xA;        SET &quot;status&quot; = 'On Hold'&#xA;        WHERE &quot;id-order&quot; = @PedidoID;&#xA;    END;&#xA;&#xA;    FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID;&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DECLARE @PedidoID INT, &#xA;&#x9;&#x9;@QuantidadePedido INT,&#xA;&#x9;&#x9;@ProdutoID INT,  &#xA;&#x9;&#x9;@QuantidadeEstoque INT,&#xA;&#x9;&#x9;@Total money;&#xA;&#xA;DECLARE pedidos_cursor CURSOR FOR&#xA;SELECT TM.&quot;id-order&quot;, SUM(TIP.&quot;quantity&quot;) AS QuantidadePedido, TIP.&quot;id-product&quot;, TP.total&#xA;FROM ItemPedido TIP &#xA;INNER JOIN Movimento TM ON TIP.&quot;id-order&quot; = TM.&quot;id-order&quot; &#xA;INNER JOIN Pedido    TP ON TP.&quot;id-order&quot;  = TM.&quot;id-order&quot; &#xA;WHERE TM.status &lt;&gt; 'Shipped'&#xA;GROUP BY TM.&quot;id-order&quot;, TIP.&quot;id-product&quot;, TP.total ORDER BY TP.total DESC;&#xA;&#xA;OPEN pedidos_cursor;&#xA;FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID, @Total;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;&#xA;    IF EXISTS &#xA;&#x9;&#x9;(&#xA;&#x9;&#x9;&#x9;SELECT 1 FROM Estoque&#xA;&#x9;&#x9;&#x9;WHERE &quot;id-product&quot; = @ProdutoID AND &quot;quantity&quot; &lt; @QuantidadePedido&#xA;    &#x9;)&#xA;&#x9;&#x9;BEGIN&#xA;&#x9;&#x9;&#x9;UPDATE Movimento&#xA;&#x9;&#x9;&#x9;SET &quot;status&quot; = 'On Hold'&#xA;&#x9;&#x9;&#x9;WHERE &quot;id-order&quot; = @PedidoID;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;UPDATE Comprar&#xA;&#x9;&#x9;&#x9;SET &quot;to-buy-quantity&quot; = &quot;to-buy-quantity&quot; + @QuantidadePedido&#xA;&#x9;&#x9;&#x9;WHERE &quot;id-product&quot; = @ProdutoID;&#xA;&#x9;&#x9;END&#xA;&#x9;ELSE&#xA;&#x9;&#x9;BEGIN&#xA;&#x9;&#x9;&#x9;UPDATE Movimento&#xA;&#x9;&#x9;&#x9;SET &quot;status&quot; = 'Shipped', &quot;compleation-date&quot; = GETDATE()&#xA;&#x9;&#x9;&#x9;WHERE &quot;id-order&quot; = @PedidoID;&#xA;&#xA;&#x9;&#x9;&#x9;UPDATE Estoque&#xA;&#x9;&#x9;&#x9;SET &quot;quantity&quot; = &quot;quantity&quot; - @QuantidadePedido&#xA;&#x9;&#x9;&#x9;WHERE &quot;id-product&quot; = @ProdutoID;&#xA;&#x9;&#x9;END&#xA;&#x9;&#x9;&#xA;    FETCH NEXT FROM pedidos_cursor INTO @PedidoID, @QuantidadePedido, @ProdutoID, @Total;&#xA;END;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -1423,6 +2149,30 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 1"
       DTS:To="Package\Inserir Pedidos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{59CBD1C6-4896-481A-BB1B-3BB173164024}"
+      DTS:From="Package\Emitindo Arquivo com a Lista de Compras"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 10"
+      DTS:To="Package\Limpar Tabela Carga das Compras" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{8C883CAB-31BA-40F3-B74F-062C3B6DF405}"
+      DTS:From="Package\Recebendo Produtos Comprados"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 11"
+      DTS:To="Package\Inserindo Produtos no Estoque" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{F9705DB0-8BCC-4D9A-9CE3-089600997C0B}"
+      DTS:From="Package\Limpar Tabela Carga das Compras"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 12"
+      DTS:To="Package\Recebendo Produtos Comprados" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restrição 2]"
       DTS:CreationName=""
@@ -1479,6 +2229,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restrição 8"
       DTS:To="Package\Tratar Pedidos" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restrição 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{3DDAEB98-D4A9-4D5E-AE5A-82E3F20D3C54}"
+      DTS:From="Package\Tratar Pedidos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restrição 9"
+      DTS:To="Package\Emitindo Arquivo com a Lista de Compras" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
@@ -1497,9 +2255,17 @@
           Id="Package\Atualizar Valor Total em Pedidos"
           TopLeft="64.769230769231,421.153846153846" />
         <NodeLayout
+          Size="284,42"
+          Id="Package\Emitindo Arquivo com a Lista de Compras"
+          TopLeft="370.868686868687,487.89898989899" />
+        <NodeLayout
           Size="317,42"
           Id="Package\Inserindo Pedidos Ordenados em Movimentação"
           TopLeft="26.8888888888889,555" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Inserindo Produtos no Estoque"
+          TopLeft="397.272727272727,255.454545454545" />
         <NodeLayout
           Size="152,42"
           Id="Package\Inserir Clientes"
@@ -1521,13 +2287,25 @@
           Id="Package\Limpar Tabela Caraga"
           TopLeft="89.3846153846159,14.3076923076923" />
         <NodeLayout
+          Size="250,42"
+          Id="Package\Limpar Tabela Carga das Compras"
+          TopLeft="383.636363636364,412.727272727273" />
+        <NodeLayout
           Size="266,42"
           Id="Package\Preencher Carga com os novos dados"
           TopLeft="58.0699300699303,80.8391608391601" />
         <NodeLayout
+          Size="242,42"
+          Id="Package\Recebendo Produtos Comprados"
+          TopLeft="389.090909090909,328.181818181818" />
+        <NodeLayout
           Size="293,42"
           Id="Package\Registrando Produto no Estoque e Comprar"
           TopLeft="36.6666666666667,485.777777777778" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Tratar Pedidos"
+          TopLeft="439.065656565656,555.631313131313" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição]"
           TopLeft="184.942307692306,190.461538461538">
@@ -1564,6 +2342,72 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,16.6538461538464" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 10]"
+          TopLeft="510.752525252526,487.89898989899">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-33.171717171717"
+              Start="0,0"
+              End="0,-25.671717171717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-25.671717171717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 11]"
+          TopLeft="511.181818181818,328.181818181818">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-30.7272727272727"
+              Start="0,0"
+              End="0,-23.2272727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.2272727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 12]"
+          TopLeft="509.363636363636,412.727272727273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-42.5454545454546"
+              Start="0,0"
+              End="0,-35.0454545454546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-35.0454545454546" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1688,14 +2532,14 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.2222222222222"
+              EndConnector="0,27.2222222222219"
               Start="0,0"
-              End="0,19.7222222222222">
+              End="0,19.7222222222219">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.7222222222222" />
+                    End="0,19.7222222222219" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1704,24 +2548,42 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Tratar Pedidos"
-          TopLeft="385.833333333333,553.611111111111" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restrição 8]"
-          TopLeft="343.888888888889,575.305555555556">
+          TopLeft="343.888888888889,576.315656565657">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="41.9444444444445,0"
+              EndConnector="95.1767676767674,0"
               Start="0,0"
-              End="34.4444444444445,0">
+              End="87.6767676767674,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="34.4444444444445,0" />
+                    End="87.6767676767674,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restrição 9]"
+          TopLeft="513.717171717172,555.631313131313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-25.732323232323"
+              Start="0,0"
+              End="0,-18.232323232323">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.232323232323" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1734,18 +2596,64 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Preencher Carga com os novos dados">
+    design-time-name="Package\Emitindo Arquivo com a Lista de Compras">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="224,42"
-          Id="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo"
-          TopLeft="56.2307692307693,66.3846153846154" />
+          Size="269,42"
+          Id="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra)"
+          TopLeft="33,19" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\Emitindo Arquivo com a Lista de Compras\Inserindo em Arquivo para Compra"
+          TopLeft="45,99" />
+        <EdgeLayout
+          Id="Package\Emitindo Arquivo com a Lista de Compras.Paths[Saída do de Origem do ADO NET]"
+          TopLeft="168.75,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Emitindo Arquivo com a Lista de Compras\Recebendo Dados do Banco (Compra)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Preencher Carga com os novos dados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="209,42"
           Id="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga"
           TopLeft="62.3076923076924,151.153846153846" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Preencher Carga com os novos dados\Recebendo dados do Arquivo"
+          TopLeft="56.2307692307693,66.3846153846154" />
         <EdgeLayout
           Id="Package\Preencher Carga com os novos dados.Paths[Saída de Origem de Arquivo Simples]"
           TopLeft="167.519230769231,108.384615384615">
@@ -1765,7 +2673,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1773,6 +2683,52 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Preencher Carga com os novos dados\Inserindo na Tabela Carga">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Recebendo Produtos Comprados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="263,42"
+          Id="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras"
+          TopLeft="325,296" />
+        <NodeLayout
+          Size="284,42"
+          Id="Package\Recebendo Produtos Comprados\Recebendo dados do Arquivo de Comprar"
+          TopLeft="319,153" />
+        <EdgeLayout
+          Id="Package\Recebendo Produtos Comprados.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="458.75,195">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,101"
+              Start="0,0"
+              End="0,93.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,93.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Recebendo Produtos Comprados\Inserindo na tabela carga de compras">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

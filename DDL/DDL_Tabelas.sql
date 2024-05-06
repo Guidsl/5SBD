@@ -80,4 +80,11 @@ CREATE TABLE Comprar (
 		      "id-product" int,
 		      "to-buy-quantity" int DEFAULT 0,
 		      FOREIGN KEY ("id-product") REFERENCES Produto ("id-product")
-		      )
+		      );
+
+CREATE TABLE CargaCompras (
+	       		    "id-product" int,
+			    "quantity" int,
+			    "product-name" nvarchar(200),
+			    "upc" nvarchar(25)
+			);
